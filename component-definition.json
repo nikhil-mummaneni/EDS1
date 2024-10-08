@@ -158,8 +158,8 @@
           }
         },
         {
-          "title": "Sciex",
-          "id": "sciex",
+          "title": "sciex-hero",
+          "id": "sciex-hero",
           "plugins": {
             "xwalk": {
               "page": {

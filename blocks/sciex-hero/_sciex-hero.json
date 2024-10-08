@@ -1,8 +1,8 @@
 {
   "definitions": [
     {
-      "title": "Sciex",
-      "id": "sciex",
+      "title": "sciex-hero",
+      "id": "sciex-hero",
       "plugins": {
         "xwalk": {
           "page": {
@@ -18,7 +18,7 @@
   ],
   "models": [
     {
-      "id": "sciex",
+      "id": "sciex-hero",
       "fields": [
         {
           "component": "reference",
