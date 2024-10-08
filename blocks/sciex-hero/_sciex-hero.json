@@ -46,7 +46,7 @@
   ],
   "filters": [
     {
-      "id": "sciex-hero",
+      "id": "section",
       "components": [
         "sciex-hero"
       ]
