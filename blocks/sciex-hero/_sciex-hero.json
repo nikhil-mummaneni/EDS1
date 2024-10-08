@@ -44,5 +44,12 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "sciex-hero",
+      "components": [
+        "sciex-hero"
+      ]
+    }
+  ]
 }
