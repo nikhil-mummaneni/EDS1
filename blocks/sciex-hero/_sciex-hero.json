@@ -44,5 +44,14 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "sciex-hero",
+      "components": [
+        "text",
+        "image",
+        "imageAlt"
+      ]
+    }
+  ]
 }
