@@ -43,9 +43,7 @@
   {
     "id": "sciex-hero",
     "components": [
-      "text",
-      "image",
-      "imageAlt"
+      "text"
     ]
   }
 ]
