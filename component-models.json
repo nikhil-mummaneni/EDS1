@@ -186,27 +186,59 @@
     ]
   },
   {
-    "id": "sciex-hero",
+    "id": "mini-teasers",
     "fields": [
       {
-        "component": "reference",
+        "component": "multiselect",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
+        "name": "classes",
+        "value": "",
+        "label": "Block Options",
+        "options": [
+          {
+            "name": "3 Columns",
+            "value": "cols-3"
+          },
+          {
+            "name": "4 Columns",
+            "value": "cols-4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mini-teaser",
+    "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "name": "mini-teaser_title",
+        "value": "",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "mini-teaser_titleType",
+        "value": "h3",
+        "label": "Title Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "mini-teaser_description",
         "value": "",
-        "label": "Text",
+        "label": "Description",
         "valueType": "string"
       }
     ]

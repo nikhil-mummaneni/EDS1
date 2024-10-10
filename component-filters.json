@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "sciex-hero"
+      "fragment"
     ]
   },
   {
@@ -41,9 +40,9 @@
     ]
   },
   {
-    "id": "sciex-hero",
+    "id": "mini-teasers",
     "components": [
-      "text"
+      "mini-teaser"
     ]
   }
 ]
