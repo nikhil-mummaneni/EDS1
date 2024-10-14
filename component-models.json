@@ -186,6 +186,49 @@
     ]
   },
   {
+    "id": "menuItem",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "MenuItem",
+        "value": "",
+        "label": "MenuItem"
+      }
+    ]
+  },
+  {
+    "id": "subMenuItem",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "SubMenuItem",
+        "value": "",
+        "label": "SubMenuItems"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "imageItem",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": true
+      }
+    ]
+  },
+  {
     "id": "sciex-hero",
     "fields": [
       {

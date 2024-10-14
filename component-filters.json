@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "sciex-hero"
+      "fragment"
     ]
   },
   {
@@ -38,6 +37,33 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "menu",
+    "components": [
+      "menuItem"
+    ]
+  },
+  {
+    "id": "menuItem",
+    "components": [
+      "text",
+      "subMenuItem"
+    ]
+  },
+  {
+    "id": "subMenuItem",
+    "components": [
+      "text",
+      "title",
+      "imageItem"
+    ]
+  },
+  {
+    "id": "imageItem",
+    "components": [
+      "reference"
     ]
   }
 ]
