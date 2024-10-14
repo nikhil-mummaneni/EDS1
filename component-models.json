@@ -186,11 +186,23 @@
     ]
   },
   {
+    "id": "menu",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Menu",
+        "value": "",
+        "label": "Menu"
+      }
+    ]
+  },
+  {
     "id": "menuItem",
     "fields": [
       {
         "component": "text",
-        "valueType": "number",
+        "valueType": "string",
         "name": "MenuItem",
         "value": "",
         "label": "MenuItem"
@@ -202,7 +214,7 @@
     "fields": [
       {
         "component": "text",
-        "valueType": "number",
+        "valueType": "string",
         "name": "SubMenuItem",
         "value": "",
         "label": "SubMenuItems"
