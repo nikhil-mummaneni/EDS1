@@ -13,7 +13,6 @@ export default function decorate(block) {
   sectionDiv.appendChild(parentDiv1);
   const container = block.querySelector('div');
   const contentContainer = container.querySelector('div');
-  debugger;
   const image = contentContainer.querySelector('picture > img');
   const imageTag = document.createElement('img');
   imageTag.className = 'tw-absolute tw-object-cover tw-h-full tw-w-full tw-z-0';
@@ -35,10 +34,7 @@ export default function decorate(block) {
     class: 'tw-w-full',
   });
   parentDiv4.appendChild(parentDiv5);
- // const firstParagraph = document.querySelector('.hero-banner p:nth-child(2)');
-
- const firstParagraph = block.querySelector('h1');
-
+  const firstParagraph = block.querySelector('h1');
   const h1ELement = document.createElement('h1');
   h1ELement.className = 'text-bravo lg:tw-max-w-9/12 xl:tw-max-w-8/12 tw-mt-16 md:tw-mt-20 lg:tw-max-w-9/12 xl:tw-max-w-8/12';
   h1ELement.textContent = firstParagraph.textContent;
@@ -63,7 +59,6 @@ export default function decorate(block) {
   const anchorLink = document.createElement('a');
   anchorLink.className = 'tw-text-mobBase md:tw-text-base tw-inline-block focus-visible:tw-outline-none tw-whitespace-nowrap focus-visible:tw-ring-offset-2 focus-visible:tw-ring-2 focus-visible:tw-ring-blue-700 tw-rounded tw-border tw-py-12 tw-px-16 md:tw-px-20 active:tw-bg-blue-900 tw-border-blue-700 tw-text-white tw-bg-gradient-to-r tw-bg-blue-700 tw-from-blue-800 tw-via-blue-800 tw-to-blue-800 tw-bg-bottom tw-bg-no-repeat tw-bg-[length:100%_0px] hover:tw-bg-[length:100%_100%] tw-transition-all motion-reduce:tw-transition-none tw-w-full md:tw-w-auto';
   anchorLink.href = href;
-  //   anchorLink.textContent = text;
   const parentDiv9 = div({
     class: 'tw-flex tw-items-center tw-justify-between',
   });
