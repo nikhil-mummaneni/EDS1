@@ -16,7 +16,9 @@
       "cards",
       "columns",
       "menu",
-      "fragment"
+      "fragment",
+      "table",
+      "horizontal-vertical"
     ]
   },
   {
