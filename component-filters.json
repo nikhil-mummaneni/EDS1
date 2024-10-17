@@ -26,6 +26,12 @@
     ]
   },
   {
+    "id": "headerbar",
+    "components": [
+      "headerbarItem"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
