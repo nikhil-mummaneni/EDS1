@@ -16,7 +16,6 @@
       "cards",
       "columns",
       "menu",
-      "headerbar",
       "fragment"
     ]
   },
@@ -24,12 +23,6 @@
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "headerbar",
-    "components": [
-      "headerbarItem"
     ]
   },
   {
