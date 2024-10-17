@@ -160,20 +160,20 @@
     ]
   },
   {
-    "id": "headerbarItem",
+    "id": "headerbar",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
-        "name": "icon",
-        "label": "Icon",
+        "name": "image",
+        "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "iconAlt",
-        "label": "Alt Text",
+        "name": "imageAlt",
+        "label": "Alt",
         "value": ""
       },
       {

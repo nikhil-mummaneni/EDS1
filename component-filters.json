@@ -41,12 +41,6 @@
     ]
   },
   {
-    "id": "headerbar",
-    "components": [
-      "headerbarItem"
-    ]
-  },
-  {
     "id": "menu",
     "components": [
       "menuItem"
