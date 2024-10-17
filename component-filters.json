@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "table"
+      "fragment"
     ]
   },
   {
@@ -39,6 +38,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "horizontal-vertical",
+    "components": [
+      "table"
     ]
   },
   {

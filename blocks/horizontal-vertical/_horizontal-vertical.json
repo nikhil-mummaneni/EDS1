@@ -59,5 +59,12 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "horizontal-vertical",
+      "components": [
+        "table"
+      ]
+    }
+  ]
 }
