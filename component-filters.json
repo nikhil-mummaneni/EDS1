@@ -16,18 +16,11 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "horizontal-vertical"
+      "fragment"
     ]
   },
   {
-    "id": "horizontal-vertical",
-    "components": [
-      "vertical-card"
-    ]
-  },
-  {
-    "id": "",
+    "id": "cards",
     "components": [
       "card"
     ]
