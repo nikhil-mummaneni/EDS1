@@ -43,18 +43,24 @@ export default function decorate(blockElement) {
           button.remove();
         }
 
-        // Add additional elements
-        const horizontalLine = document.createElement('div');
-        horizontalLine.className = 'horizontal-line';
-        horizontalLine.style.borderTop = '1px solid #ccc';
-        horizontalLine.style.margin = '10px 0';
+        // Find the anchor tag inside rowElement
+        const anchorTag = rowElement.querySelector('a');
 
-        const link = document.createElement('a');
-        link.className = 'cta arrow-link'; // Combine classes for styling
-        link.href = '#';
-        link.textContent = 'Learn More';
+        // If an anchor tag exists, append it to card-body
+        if (anchorTag) {
+          const newLink = document.createElement('a');
+          newLink.className = 'cta arrow-link'; // Combine classes for styling
+          newLink.href = anchorTag.href; // Use the href from the existing anchor
+          newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
 
-        div.append(horizontalLine, link);
+          // Add additional elements
+          const horizontalLine = document.createElement('div');
+          horizontalLine.className = 'horizontal-line';
+          horizontalLine.style.borderTop = '1px solid #ccc';
+          horizontalLine.style.margin = '10px 0';
+
+          div.append(horizontalLine, newLink);
+        }
       }
     });
 
