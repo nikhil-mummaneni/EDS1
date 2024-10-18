@@ -44,12 +44,7 @@
   {
     "id": "horizontal-vertical",
     "components": [
-      "vertical-card"
-    ]
-  },
-  {
-    "id": "horizontal-vertical",
-    "components": [
+      "vertical-card",
       "title-description"
     ]
   },
