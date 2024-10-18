@@ -46,8 +46,10 @@ export default function decorate(blockElement) {
         // Find the anchor tag inside rowElement
         const anchorTag = rowElement.querySelector('a');
 
-        // If an anchor tag exists, append it to card-body
+        // If an anchor tag exists, create a separate div for it
         if (anchorTag) {
+          const anchorContainer = document.createElement('div');
+
           // Create a horizontal line
           const horizontalLine = document.createElement('div');
           horizontalLine.className = 'horizontal-line';
@@ -59,9 +61,11 @@ export default function decorate(blockElement) {
           newLink.href = anchorTag.href; // Use the href from the existing anchor
           newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
 
-          // Append the horizontal line first, then the link
-          div.append(horizontalLine); // Append horizontal line first
-          div.append(newLink); // Append the link after
+          // Append the horizontal line and the link to the anchor container
+          anchorContainer.append(horizontalLine, newLink);
+
+          // Append the anchor container to the card-body
+          div.append(anchorContainer);
         }
       }
     });
