@@ -45,26 +45,5 @@
     "components": [
       "menuItem"
     ]
-  },
-  {
-    "id": "menuItem",
-    "components": [
-      "text",
-      "subMenuItem"
-    ]
-  },
-  {
-    "id": "subMenuItem",
-    "components": [
-      "text",
-      "title",
-      "imageItem"
-    ]
-  },
-  {
-    "id": "imageItem",
-    "components": [
-      "reference"
-    ]
   }
 ]
