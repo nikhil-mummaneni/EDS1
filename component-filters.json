@@ -48,6 +48,12 @@
     ]
   },
   {
+    "id": "horizontal-vertical",
+    "components": [
+      "title-description"
+    ]
+  },
+  {
     "id": "menu",
     "components": [
       "menuItem"
