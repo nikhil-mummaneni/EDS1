@@ -6,12 +6,16 @@ export default function decorate(blockElement) {
   const ul = document.createElement('ul');
   ul.className = 'card-list'; // Optional: add class for styling
 
+  // Create a separate div for title-description items
+  const titleDescriptionDiv = document.createElement('div');
+  titleDescriptionDiv.className = 'title-description-container';
+
   // Loop through each child of the blockElement
   [...blockElement.children].forEach((rowElement) => {
     // Check if rowElement has the data-aue-model attribute with value title-description
     if (rowElement.dataset.aueModel === 'title-description') {
-      // Directly append to blockElement if it has data-aue-model="title-description"
-      blockElement.append(rowElement);
+      // Append to the titleDescriptionDiv if it has data-aue-model="title-description"
+      titleDescriptionDiv.append(rowElement);
       return; // Skip further processing for this element
     }
 
@@ -58,14 +62,14 @@ export default function decorate(blockElement) {
     ul.append(li);
   });
 
+  // Clear the blockElement and append the new ul and titleDescriptionDiv
+  blockElement.textContent = '';
+  blockElement.append(titleDescriptionDiv, ul);
+
   // Replace images with optimized versions
   ul.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
-
-  // Clear the blockElement and append the new ul
-  blockElement.textContent = '';
-  blockElement.append(ul);
 }
