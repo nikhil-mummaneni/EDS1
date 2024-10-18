@@ -48,7 +48,7 @@ export default function decorate(blockElement) {
 
         // If an anchor tag exists, append it to card-body
         if (anchorTag) {
-          // Add additional elements
+          // Create a horizontal line
           const horizontalLine = document.createElement('div');
           horizontalLine.className = 'horizontal-line';
           horizontalLine.style.borderTop = '1px solid #ccc';
@@ -60,7 +60,8 @@ export default function decorate(blockElement) {
           newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
 
           // Append the horizontal line first, then the link
-          div.append(horizontalLine, newLink);
+          div.append(horizontalLine); // Append horizontal line first
+          div.append(newLink); // Append the link after
         }
       }
     });
