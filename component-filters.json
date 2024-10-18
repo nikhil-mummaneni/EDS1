@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "horizontal-vertical"
+      "fragment"
     ]
   },
   {
@@ -44,8 +43,7 @@
   {
     "id": "horizontal-vertical",
     "components": [
-      "vertical-card",
-      "title-description"
+      "vertical-card"
     ]
   },
   {
