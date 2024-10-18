@@ -8,6 +8,13 @@ export default function decorate(blockElement) {
 
   // Loop through each child of the blockElement
   [...blockElement.children].forEach((rowElement) => {
+    // Check if rowElement has the class title-description
+    if (rowElement.classList.contains('title-description')) {
+      // Directly append to blockElement if it has title-description class
+      blockElement.append(rowElement);
+      return; // Skip further processing for this element
+    }
+
     const li = document.createElement('li');
     li.className = 'card'; // Apply card class
 

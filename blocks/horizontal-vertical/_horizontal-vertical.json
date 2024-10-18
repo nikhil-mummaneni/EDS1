@@ -97,6 +97,12 @@
       "components": [
         "vertical-card"
       ]
+    },
+    {
+      "id": "horizontal-vertical",
+      "components": [
+        "title-description"
+      ]
     }
   ]
 }
