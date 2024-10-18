@@ -6,8 +6,6 @@ export default function decorate(blockElement) {
   const ul = document.createElement('ul');
   ul.className = 'card-list'; // Optional: add class for styling
 
-  let itemCount = 0;
-
   // Loop through each child of the blockElement
   [...blockElement.children].forEach((rowElement) => {
     const li = document.createElement('li');
@@ -28,31 +26,29 @@ export default function decorate(blockElement) {
       } else {
         div.className = 'card-body';
 
+        // Remove button if it exists
         const button = div.querySelector('button');
         if (button) {
-          button.remove(); // Remove button if it exists
+          button.remove();
         }
 
-        // Add additional elements if itemCount is greater than 1
-        if (itemCount > 1) {
-          const horizontalLine = document.createElement('div');
-          horizontalLine.className = 'horizontal-line';
-          horizontalLine.style.borderTop = '1px solid #ccc';
-          horizontalLine.style.margin = '10px 0';
+        // Add additional elements
+        const horizontalLine = document.createElement('div');
+        horizontalLine.className = 'horizontal-line';
+        horizontalLine.style.borderTop = '1px solid #ccc';
+        horizontalLine.style.margin = '10px 0';
 
-          const link = document.createElement('a');
-          link.className = 'cta arrow-link'; // Combine classes for styling
-          link.href = '#';
-          link.textContent = 'Learn More';
+        const link = document.createElement('a');
+        link.className = 'cta arrow-link'; // Combine classes for styling
+        link.href = '#';
+        link.textContent = 'Learn More';
 
-          div.append(horizontalLine, link);
-        }
+        div.append(horizontalLine, link);
       }
     });
 
     // Append li to the ul
     ul.append(li);
-    itemCount += 1; // Increment item count
   });
 
   // Replace images with optimized versions
