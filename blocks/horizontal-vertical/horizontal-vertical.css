@@ -1,3 +1,20 @@
+.title-description-container {
+    padding: 20px; /* Padding for the container */
+}
+
+.title-description-container h3 {
+    color: #0084a9; /* Set color for h3 */
+    font-size: 24px; /* Increase font size for h3 */
+    padding: 10px 0; /* Apply padding to h3 */
+}
+
+.title-description-container p {
+    font-size: 16px; /* Set font size for p */
+    line-height: 24px; /* Set line height for p */
+    color: #585857; /* Set color for p */
+    padding: 10px 0; /* Apply padding to p */
+}
+
 .horizontal-vertical-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -80,8 +97,6 @@
     color: #007DA4;
     text-decoration: none;
 }
-
-
 
 .arrow {
     margin-left: 220px;
