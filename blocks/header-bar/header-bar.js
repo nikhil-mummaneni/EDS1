@@ -1,10 +1,4 @@
-import {
-    div,
-    span,
-  } from '../../scripts/dom-builder.js';
-
 export default function decorate(block) {
-   
-    debugger;
-
-  }
+  block.textContent = '';
+  block.classList.add('tw');
+}
