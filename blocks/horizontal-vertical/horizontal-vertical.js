@@ -48,17 +48,18 @@ export default function decorate(blockElement) {
 
         // If an anchor tag exists, append it to card-body
         if (anchorTag) {
-          const newLink = document.createElement('a');
-          newLink.className = 'cta arrow-link'; // Combine classes for styling
-          newLink.href = anchorTag.href; // Use the href from the existing anchor
-          newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
-
           // Add additional elements
           const horizontalLine = document.createElement('div');
           horizontalLine.className = 'horizontal-line';
           horizontalLine.style.borderTop = '1px solid #ccc';
           horizontalLine.style.margin = '10px 0';
 
+          const newLink = document.createElement('a');
+          newLink.className = 'cta arrow-link'; // Combine classes for styling
+          newLink.href = anchorTag.href; // Use the href from the existing anchor
+          newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
+
+          // Append the horizontal line first, then the link
           div.append(horizontalLine, newLink);
         }
       }
