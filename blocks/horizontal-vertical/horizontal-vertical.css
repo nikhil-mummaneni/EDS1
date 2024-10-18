@@ -74,6 +74,8 @@
 
 .card-body h3 {
     overflow-wrap: anywhere;
+    color: #5F6062;
+    font: Helvetica, Arial, sans-serif;
 }
 
 .card-body p {
