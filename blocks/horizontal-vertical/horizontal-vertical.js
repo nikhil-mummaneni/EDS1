@@ -6,19 +6,8 @@ export default function decorate(blockElement) {
   const ul = document.createElement('ul');
   ul.className = 'card-list'; // Optional: add class for styling
 
-  // Create a separate div for title-description items
-  const titleDescriptionDiv = document.createElement('div');
-  titleDescriptionDiv.className = 'title-description-container';
-
   // Loop through each child of the blockElement
   [...blockElement.children].forEach((rowElement) => {
-    // Check if rowElement has the data-aue-model attribute with value title-description
-    if (rowElement.dataset.aueModel === 'title-description') {
-      // Append to the titleDescriptionDiv if it has data-aue-model="title-description"
-      titleDescriptionDiv.append(rowElement);
-      return; // Skip further processing for this element
-    }
-
     const li = document.createElement('li');
     li.className = 'card'; // Apply card class
 
@@ -43,30 +32,18 @@ export default function decorate(blockElement) {
           button.remove();
         }
 
-        // Find the anchor tag inside rowElement
-        const anchorTag = rowElement.querySelector('a');
+        // Add additional elements
+        const horizontalLine = document.createElement('div');
+        horizontalLine.className = 'horizontal-line';
+        horizontalLine.style.borderTop = '1px solid #ccc';
+        horizontalLine.style.margin = '10px 0';
 
-        // If an anchor tag exists, create a separate div for it
-        if (anchorTag) {
-          const anchorContainer = document.createElement('div');
+        const link = document.createElement('a');
+        link.className = 'cta arrow-link'; // Combine classes for styling
+        link.href = '#';
+        link.textContent = 'Learn More';
 
-          // Create a horizontal line
-          const horizontalLine = document.createElement('div');
-          horizontalLine.className = 'horizontal-line';
-          horizontalLine.style.borderTop = '1px solid #ccc';
-          horizontalLine.style.margin = '10px 0';
-
-          const newLink = document.createElement('a');
-          newLink.className = 'cta arrow-link'; // Combine classes for styling
-          newLink.href = anchorTag.href; // Use the href from the existing anchor
-          newLink.textContent = anchorTag.textContent || 'Learn More'; // Default text if none exists
-
-          // Append the horizontal line and the link to the anchor container
-          anchorContainer.append(horizontalLine, newLink);
-
-          // Append the anchor container to the card-body
-          div.append(anchorContainer);
-        }
+        div.append(horizontalLine, link);
       }
     });
 
@@ -74,14 +51,14 @@ export default function decorate(blockElement) {
     ul.append(li);
   });
 
-  // Clear the blockElement and append the new ul and titleDescriptionDiv
-  blockElement.textContent = '';
-  blockElement.append(titleDescriptionDiv, ul);
-
   // Replace images with optimized versions
   ul.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
+
+  // Clear the blockElement and append the new ul
+  blockElement.textContent = '';
+  blockElement.append(ul);
 }
