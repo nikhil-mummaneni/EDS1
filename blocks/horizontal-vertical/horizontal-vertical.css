@@ -81,28 +81,7 @@
     text-decoration: none;
 }
 
-.card-body h3 {
-    color: #5F6062;
-    font: 18px Arial, Helvetica, sans-serif;
-}
 
-.first-item,
-.second-item {
-    padding: 20px;
-}
-
-.first-item {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #027DA4;
-}
-
-.second-item {
-    padding: 0 0 10px 20px;
-    font-size: 16px;
-    line-height: 24px;
-    color: #585857;
-}
 
 .arrow {
     margin-left: 220px;
@@ -128,8 +107,8 @@
 }
 
 main > .section > div {
-            padding: 30px 24px;
-        }
+    padding: 30px 24px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -143,11 +122,6 @@ main > .section > div {
         font-size: 0.8em; /* Slightly smaller text */
     }
 
-    .first-item,
-    .second-item {
-        padding: 10px; /* Reduce padding for mobile */
-    }
-
     .arrow {
         margin-left: 0; /* Remove left margin for mobile */
         text-align: center; /* Center the arrow for better alignment */
@@ -157,4 +131,3 @@ main > .section > div {
         padding-right: 20px; /* Adjust padding for mobile */
     }
 }
-
