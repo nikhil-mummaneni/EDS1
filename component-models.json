@@ -189,11 +189,17 @@
     "id": "menu",
     "fields": [
       {
-        "component": "text",
+        "component": "multiselect",
         "valueType": "string",
-        "name": "Menu",
+        "name": "classes",
         "value": "",
-        "label": "Menu"
+        "label": "Block Options",
+        "options": [
+          {
+            "name": "3 Columns",
+            "value": "cols-3"
+          }
+        ]
       }
     ]
   },
@@ -203,40 +209,23 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "MenuItem",
+        "name": "menuItem_title",
         "value": "",
-        "label": "MenuItem"
-      }
-    ]
-  },
-  {
-    "id": "subMenuItem",
-    "fields": [
+        "label": "Title"
+      },
       {
         "component": "text",
+        "name": "menuItem_titleType",
+        "label": "",
         "valueType": "string",
-        "name": "SubMenuItem",
-        "value": "",
-        "label": "SubMenuItems"
+        "hidden": true
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "menuItem_description",
         "value": "",
-        "label": "Text",
+        "label": "Description",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "imageItem",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": true
       }
     ]
   },

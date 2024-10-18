@@ -55,9 +55,7 @@
     {
       "id": "menuItem",
       "fields": [
-        {
-          "...": "../../../models/_common.json#/image-fields"
-        },
+       
         {
           "component": "text",
           "valueType": "string",
@@ -78,18 +76,7 @@
           "value": "",
           "label": "Description",
           "valueType": "string"
-        },
-        {
-          "...": "../../../models/_common.json#/button-fields"
         }
-      ]
-    }
-  ],
-  "filters": [
-    {
-      "id": "menu",
-      "components": [
-        "menuItem"
       ]
     }
   ]
