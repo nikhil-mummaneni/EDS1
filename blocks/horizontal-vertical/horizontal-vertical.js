@@ -8,9 +8,9 @@ export default function decorate(blockElement) {
 
   // Loop through each child of the blockElement
   [...blockElement.children].forEach((rowElement) => {
-    // Check if rowElement has the class title-description
-    if (rowElement.classList.contains('title-description')) {
-      // Directly append to blockElement if it has title-description class
+    // Check if rowElement has the data-aue-model attribute with value title-description
+    if (rowElement.dataset.aueModel === 'title-description') {
+      // Directly append to blockElement if it has data-aue-model="title-description"
       blockElement.append(rowElement);
       return; // Skip further processing for this element
     }
