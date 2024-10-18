@@ -43,7 +43,8 @@
   {
     "id": "headerbar",
     "components": [
-      "headerbarItem"
+      "headerbarItem",
+      "headerbar"
     ]
   },
   {

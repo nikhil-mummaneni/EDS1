@@ -32,6 +32,23 @@
     }
   ],
   "models": [
+     {
+      "id": "headerbar",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "icon",
+          "label": "Icon",
+          "multi": false
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Link"
+        }
+      ]
+    },
     {
       "id": "headerbarItem",
       "fields": [
@@ -63,7 +80,9 @@
     {
       "id": "headerbar",
       "components": [
-        "headerbarItem"
+        "headerbarItem",
+        "headerbar"
+
       ]
     }
   ]
