@@ -49,10 +49,14 @@ export default function decorate(blockElement) {
         horizontalLine.style.borderTop = '1px solid #ccc';
         horizontalLine.style.margin = '10px 0';
 
-        const link = document.createElement('a');
+        // Dynamically retrieve the existing anchor tag
+        const existingAnchor = div.querySelector('a');
+
+        // Create a new anchor tag if none exists
+        const link = existingAnchor ? existingAnchor.cloneNode(true) : document.createElement('a');
         link.className = 'cta arrow-link'; // Combine classes for styling
-        link.href = '#';
-        link.textContent = 'Learn More';
+        link.href = existingAnchor ? existingAnchor.href : '#'; // Use existing href if available
+        link.textContent = existingAnchor ? existingAnchor.textContent : 'Learn More'; // Use existing text if available
 
         div.append(horizontalLine, link);
       }
