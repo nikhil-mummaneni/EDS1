@@ -52,6 +52,11 @@ export default function decorate(blockElement) {
           anchorContainerDiv.className = 'anchor-container'; // Assign a class to the new div
           anchorContainerDiv.append(anchor); // Move the anchor into the new div
 
+          // Apply styles to the anchor (mimicking the "Learn More" styles)
+          anchor.classList.add('cta', 'arrow-link'); // Combine classes for styling
+          anchor.href = '#'; // You might want to set a valid href
+          anchor.textContent = anchor.textContent || 'Learn More'; // Default text if none exists
+
           // Append the new div back to the card-body div
           div.append(anchorContainerDiv);
         }
@@ -62,12 +67,7 @@ export default function decorate(blockElement) {
         horizontalLine.style.borderTop = '1px solid #ccc';
         horizontalLine.style.margin = '10px 0';
 
-        const link = document.createElement('a');
-        link.className = 'cta arrow-link'; // Combine classes for styling
-        link.href = '#';
-        link.textContent = 'Learn More';
-
-        div.append(horizontalLine, link);
+        div.append(horizontalLine);
       }
     });
 
