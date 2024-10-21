@@ -196,7 +196,6 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Menu",
-                  "model": "menu",
                   "filter": "menu"
                 }
               }
@@ -213,57 +212,6 @@
                 "template": {
                   "name": "MenuItem",
                   "model": "menuItem"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "MenuItem",
-          "id": "menuItem",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "MenuItem",
-                  "model": "menuItem",
-                  "column1text": "Column1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "SubMenuItem",
-          "id": "subMenuItem",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "SubMenuItem",
-                  "model": "subMenuItem",
-                  "column1text": "Column1",
-                  "column2text": "Column2"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "ImageItem",
-          "id": "imageItem",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "ImageItem",
-                  "model": "imageItem",
-                  "column1text": "Column1",
-                  "column2text": "Column2",
-                  "column3text": "Column3"
                 }
               }
             }
