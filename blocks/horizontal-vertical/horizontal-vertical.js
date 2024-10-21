@@ -46,6 +46,14 @@ export default function decorate(blockElement) {
         // Find anchor tag based on your specific query
         const anchor = div.querySelector('a'); // Adjust the selector as needed
 
+        // Add horizontal line first
+        const horizontalLine = document.createElement('div');
+        horizontalLine.className = 'horizontal-line';
+        horizontalLine.style.borderTop = '1px solid #ccc';
+        horizontalLine.style.margin = '10px 0';
+
+        div.append(horizontalLine); // Append horizontal line to card body
+
         // If an anchor is found, create a new div and move the anchor into it
         if (anchor) {
           const anchorContainerDiv = document.createElement('div');
@@ -59,14 +67,6 @@ export default function decorate(blockElement) {
 
           // Append the anchorContainerDiv back to the card-body div
           div.append(anchorContainerDiv);
-
-          // Create and append the horizontal line after the anchorContainerDiv
-          const horizontalLine = document.createElement('div');
-          horizontalLine.className = 'horizontal-line';
-          horizontalLine.style.borderTop = '1px solid #ccc';
-          horizontalLine.style.margin = '10px 0';
-
-          div.append(horizontalLine);
         }
       }
     });
