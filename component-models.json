@@ -186,6 +186,32 @@
     ]
   },
   {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -212,61 +238,6 @@
     ]
   },
   {
-    "id": "menuCategory",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "menuCategory",
-        "value": "",
-        "label": "Menu Category"
-      }
-    ]
-  },
-  {
-    "id": "menuItem",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "menuItemtext",
-        "value": "",
-        "label": "Menu Item text"
-      }
-    ]
-  },
-  {
-    "id": "subMenuItem",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "subMenuItemtext",
-        "value": "",
-        "label": "SubMenu Item text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "imageItem",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": true
-      }
-    ]
-  },
-  {
     "id": "sciex-hero",
     "fields": [
       {
@@ -281,6 +252,32 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabItem",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "label": "Alt Text",
         "value": ""
       },
       {
