@@ -217,9 +217,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "Menu",
+        "name": "Menutext",
         "value": "",
-        "label": "Menu"
+        "label": "Menutext"
       }
     ]
   },
@@ -229,9 +229,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "MenuItem",
+        "name": "MenuItemtext",
         "value": "",
-        "label": "MenuItem"
+        "label": "MenuItemtext"
       }
     ]
   },
@@ -241,9 +241,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "SubMenuItem",
+        "name": "SubMenuItemtext",
         "value": "",
-        "label": "SubMenuItems"
+        "label": "SubMenuItemtext"
       },
       {
         "component": "richtext",
