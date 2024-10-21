@@ -54,7 +54,7 @@ export default function decorate(blockElement) {
 
         div.append(horizontalLine); // Append horizontal line to card body
 
-        // If an anchor is found, create a new div and move the anchor into it
+        // If an anchor is found, update its properties and move it
         if (anchor) {
           const anchorContainerDiv = document.createElement('div');
           anchorContainerDiv.className = 'anchor-container'; // Assign a class to the new div
@@ -63,13 +63,12 @@ export default function decorate(blockElement) {
           const anchorText = anchor.textContent || 'Learn More';
           const anchorHref = anchor.href || '#';
 
-          // Create a new anchor element with the extracted values
-          const newAnchor = document.createElement('a');
-          newAnchor.classList.add('cta', 'arrow-link'); // Combine classes for styling
-          newAnchor.href = anchorHref; // Set the href
-          newAnchor.textContent = anchorText; // Set the text content
+          // Update the existing anchor element
+          anchor.classList.add('cta', 'arrow-link'); // Add classes for styling
+          anchor.href = anchorHref; // Ensure the href is set
+          anchor.textContent = anchorText; // Set the text content
 
-          anchorContainerDiv.append(newAnchor); // Move the new anchor into the new div
+          anchorContainerDiv.append(anchor); // Move the existing anchor into the new div
 
           // Append the anchorContainerDiv back to the card-body div
           div.append(anchorContainerDiv);
