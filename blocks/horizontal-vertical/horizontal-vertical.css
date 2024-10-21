@@ -1,18 +1,18 @@
 .title-description-container {
-    padding: 20px; /* Padding for the container */
+    padding: 20px;
 }
 
 .title-description-container h2 {
-    color: #0084a9; /* Set color for h3 */
-    font-size: 24px; /* Increase font size for h3 */
-    padding: 10px 0; /* Apply padding to h3 */
+    color: #0084a9;
+    font-size: 24px;
+    padding: 10px 0;
 }
 
 .title-description-container p {
-    font-size: 16px; /* Set font size for p */
-    line-height: 24px; /* Set line height for p */
-    color: #585857; /* Set color for p */
-    padding: 10px 0; /* Apply padding to p */
+    font-size: 16px;
+    line-height: 24px;
+    color: #585857;
+    padding: 10px 0;
 }
 
 .horizontal-vertical-wrapper {
@@ -131,21 +131,21 @@ main > .section > div {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .card {
-        flex: 0 1 100%; /* Full width */
-        margin: 10px 0; /* Adjust margins for mobile */
+        flex: 0 1 100%;
+        margin: 10px 0;
     }
 
     .card-body {
-        padding: 15px; /* Less padding on mobile */
-        font-size: 0.8em; /* Slightly smaller text */
+        padding: 15px;
+        font-size: 0.8em;
     }
 
     .arrow {
-        margin-left: 0; /* Remove left margin for mobile */
-        text-align: center; /* Center the arrow for better alignment */
+        margin-left: 0;
+        text-align: center;
     }
 
     .arrow-link {
-        padding-right: 20px; /* Adjust padding for mobile */
+        padding-right: 20px;
     }
 }
