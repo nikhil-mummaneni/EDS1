@@ -58,12 +58,18 @@ export default function decorate(blockElement) {
         if (anchor) {
           const anchorContainerDiv = document.createElement('div');
           anchorContainerDiv.className = 'anchor-container'; // Assign a class to the new div
-          anchorContainerDiv.append(anchor); // Move the anchor into the new div
 
-          // Apply styles to the anchor (mimicking the "Learn More" styles)
-          anchor.classList.add('cta', 'arrow-link'); // Combine classes for styling
-          anchor.href = '#'; // You might want to set a valid href
-          anchor.textContent = anchor.textContent || 'Learn More'; // Default text if none exists
+          // Get the text content and href from the original anchor
+          const anchorText = anchor.textContent || 'Learn More';
+          const anchorHref = anchor.href || '#';
+
+          // Create a new anchor element with the extracted values
+          const newAnchor = document.createElement('a');
+          newAnchor.classList.add('cta', 'arrow-link'); // Combine classes for styling
+          newAnchor.href = anchorHref; // Set the href
+          newAnchor.textContent = anchorText; // Set the text content
+
+          anchorContainerDiv.append(newAnchor); // Move the new anchor into the new div
 
           // Append the anchorContainerDiv back to the card-body div
           div.append(anchorContainerDiv);
