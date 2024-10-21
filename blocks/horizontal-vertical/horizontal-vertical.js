@@ -57,17 +57,17 @@ export default function decorate(blockElement) {
           anchor.href = '#'; // You might want to set a valid href
           anchor.textContent = anchor.textContent || 'Learn More'; // Default text if none exists
 
-          // Append the new div back to the card-body div
+          // Append the anchorContainerDiv back to the card-body div
           div.append(anchorContainerDiv);
+
+          // Create and append the horizontal line after the anchorContainerDiv
+          const horizontalLine = document.createElement('div');
+          horizontalLine.className = 'horizontal-line';
+          horizontalLine.style.borderTop = '1px solid #ccc';
+          horizontalLine.style.margin = '10px 0';
+
+          div.append(horizontalLine);
         }
-
-        // Add additional elements
-        const horizontalLine = document.createElement('div');
-        horizontalLine.className = 'horizontal-line';
-        horizontalLine.style.borderTop = '1px solid #ccc';
-        horizontalLine.style.margin = '10px 0';
-
-        div.append(horizontalLine);
       }
     });
 
