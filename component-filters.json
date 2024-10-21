@@ -20,6 +20,10 @@
     ]
   },
   {
+    "id": "bread-crumb",
+    "components": []
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -44,30 +48,6 @@
     "id": "headerbar",
     "components": [
       "headerbarItem"
-    ]
-  },
-  {
-    "id": "menu",
-    "components": [
-      "menuCategory"
-    ]
-  },
-  {
-    "id": "menuCategory",
-    "components": [
-      "menuItem"
-    ]
-  },
-  {
-    "id": "menuItem",
-    "components": [
-      "subMenuItem"
-    ]
-  },
-  {
-    "id": "subMenuItem",
-    "components": [
-      "imageItem"
     ]
   }
 ]

@@ -112,6 +112,10 @@
     ]
   },
   {
+    "id": "bread-crumb",
+    "fields": []
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -208,61 +212,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "menuCategory",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "menuCategory",
-        "value": "",
-        "label": "Menu Category"
-      }
-    ]
-  },
-  {
-    "id": "menuItem",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "menuItemtext",
-        "value": "",
-        "label": "Menu Item text"
-      }
-    ]
-  },
-  {
-    "id": "subMenuItem",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "subMenuItemtext",
-        "value": "",
-        "label": "SubMenu Item text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "imageItem",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": true
       }
     ]
   },
