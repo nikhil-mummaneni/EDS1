@@ -16,6 +16,20 @@
       }
     },
     {
+      "title": "MenuCategory",
+      "id": "menuCategory",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "MenuCategory",
+              "model": "menuCategory"
+            }
+          }
+        }
+      }
+    },{
       "title": "MenuItem",
       "id": "menuItem",
       "plugins": {
@@ -29,40 +43,91 @@
           }
         }
       }
+    },
+ {
+      "title": "SubMenuItem",
+      "id": "subMenuItem",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "SubMenuItem",
+              "model": "subMenuItem"
+            }
+          }
+        }
+      }
+    },
+  {
+      "title": "ImageItem",
+      "id": "imageItem",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "ImageItem",
+              "model": "imageItem"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
+
+
     {
-      "id": "menuItem",
+      "id": "menuCategory",
       "fields": [
-       
         {
           "component": "text",
           "valueType": "string",
-          "name": "Menutext",
+          "name": "menuCategory",
           "value": "",
-          "label": "Menutext"
-        },
+          "label": "Menu Category"
+        }
+      ]
+    },
+    {
+      "id": "menuItem",
+      "fields": [
         {
           "component": "text",
           "valueType": "string",
           "name": "menuItemtext",
           "value": "",
-          "label": "menuItemtext"
+          "label": "Menu Item text"
+        }
+      ]
+    },{
+      "id": "subMenuItem",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subMenuItemtext",
+          "value": "",
+          "label": "SubMenu Item text"
         },
         {
           "component": "richtext",
-          "name": "SubMenuItemtext",
+          "name": "text",
           "value": "",
-          "label": "SubMenuItemtext",
+          "label": "Text",
           "valueType": "string"
-        },
+        }
+      ]
+    },{
+      "id": "imageItem",
+      "fields": [
         {
           "component": "reference",
           "valueType": "string",
           "name": "image",
           "label": "Image",
-          "multi": false
+          "multi": true
         }
       ]
     }
@@ -70,9 +135,19 @@
   "filters": [
     {
       "id": "menu",
-      "components": [
-        "menuItem"
-      ]
+      "components": ["menuCategory"]
+    },
+    {
+      "id": "menuCategory",
+      "components": ["menuItem"]
+    },
+    {
+      "id":"menuItem",
+      "components": ["subMenuItem"]
+    },
+    {
+      "id":"subMenuItem",
+      "components": ["imageItem"]
     }
   ]
 }

@@ -49,7 +49,25 @@
   {
     "id": "menu",
     "components": [
+      "menuCategory"
+    ]
+  },
+  {
+    "id": "menuCategory",
+    "components": [
       "menuItem"
+    ]
+  },
+  {
+    "id": "menuItem",
+    "components": [
+      "subMenuItem"
+    ]
+  },
+  {
+    "id": "subMenuItem",
+    "components": [
+      "imageItem"
     ]
   }
 ]
