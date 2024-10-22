@@ -16,12 +16,11 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "breadcrumb"
+      "fragment"
     ]
   },
   {
-    "id": "breadcrumb",
+    "id": "bread-crumb",
     "components": []
   },
   {
