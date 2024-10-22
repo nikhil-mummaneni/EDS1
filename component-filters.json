@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "menu",
-      "fragment"
+       "tabs",
+      "hero-banner"
     ]
   },
   {
@@ -48,6 +49,12 @@
     "id": "headerbar",
     "components": [
       "headerbarItem"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tabItem"
     ]
   }
 ]
