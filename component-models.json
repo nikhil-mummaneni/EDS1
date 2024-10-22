@@ -178,7 +178,7 @@
       },
       {
         "component": "richtext",
-        "name": "desciption",
+        "name": "description",
         "value": "",
         "label": "Description",
         "valueType": "string"
