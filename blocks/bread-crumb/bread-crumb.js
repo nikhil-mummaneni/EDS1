@@ -3,20 +3,20 @@ import {
   div, nav, ol, li, a, span,
 } from '../../scripts/dom-builder.js';
 
-// breadcrumb functionality implementation
+// Breadcrumb functionality implementation
 export default function decorate(block) {
   const pathname = window.location.pathname.split('/').slice(1);
   const title = getMetadata('og:title');
   const { length } = pathname;
+
   const breadcrumbOl = ol({ class: 'breadcrumb-list' });
-  const homeSvg = span({ class: 'home-logo' });
+
+  // Home icon and link
+  const homeSvg = span({ class: 'home-icon' });
   const homeAnchor = a({
     class: 'home-link',
     href: '/',
-  });
-  homeAnchor.appendChild(homeSvg);
-  decorateIcons(homeAnchor);
-
+  }, homeSvg);
   const homeLi = li({ class: 'breadcrumb-item' }, homeAnchor);
   breadcrumbOl.appendChild(homeLi);
 
@@ -27,32 +27,29 @@ export default function decorate(block) {
     const linkText = (i === length - 1) ? title : pathnameToUpperCase + pathname[i].slice(1);
     const formattedLinkText = linkText.toLowerCase().replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
 
-    if (i < length) {
-      const divSvg = div({ class: 'separator' });
-      const separatorSvg = span({ class: 'icon icon-chevron' });
-      divSvg.appendChild(separatorSvg);
-      decorateIcons(divSvg);
+    // Create breadcrumb link
+    const breadcrumbLink = a({
+      class: 'breadcrumb-link',
+      href: url,
+    }, formattedLinkText);
+    const breadcrumbLi = li({ class: 'breadcrumb-item' }, breadcrumbLink);
 
-      const breadcrumbLink = a({
-        class: 'breadcrumb-link',
-        href: url,
-      }, formattedLinkText);
-      breadcrumbLink.appendChild(divSvg);
-      const breadcrumbLi = li(
-        { class: 'breadcrumb-item' },
-        divSvg,
-        breadcrumbLink,
-      );
-      breadcrumbOl.appendChild(breadcrumbLi);
-    } else {
-      const breadcrumbLink = a({
-        class: 'breadcrumb-link last',
-        href: url,
-      }, formattedLinkText);
-      const breadcrumbLi = li({ class: 'breadcrumb-item' }, breadcrumbLink);
-      breadcrumbOl.appendChild(breadcrumbLi);
+    // Add chevron if it's not the last breadcrumb
+    if (i < length - 1) {
+      const separatorSvg = span({ class: 'icon icon-chevron' });
+      breadcrumbLi.appendChild(separatorSvg);
     }
+
+    breadcrumbOl.appendChild(breadcrumbLi);
   }
+
+  // Last breadcrumb link without chevron
+  const lastBreadcrumbLink = a({
+    class: 'breadcrumb-link last',
+    href: url,
+  }, formattedLinkText);
+  const lastBreadcrumbLi = li({ class: 'breadcrumb-item' }, lastBreadcrumbLink);
+  breadcrumbOl.appendChild(lastBreadcrumbLi);
 
   const breadcrumbNav = nav(
     { class: 'breadcrumb-nav' },
