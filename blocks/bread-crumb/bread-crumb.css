@@ -58,3 +58,14 @@
   padding: 0; /* Equivalent to px-0 */
   margin-left: 0; /* Equivalent to ml-0 */
 }
+
+.icon-chevron {
+  display: inline-block;
+  width: 0; /* Width and height are set to 0 to create the triangle */
+  height: 0;
+  border-left: 4px solid transparent; /* Left border */
+  border-right: 4px solid transparent; /* Right border */
+  border-top: 6px solid #a0aec0; /* Top border as the chevron color */
+  margin: 0 0.5rem; /* Space around the icon */
+  transform: translateY(-2px); /* Adjusts the position */
+}
