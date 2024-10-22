@@ -2,7 +2,7 @@
   "definitions": [
     {
       "title": "Tab",
-      "id": "tab",
+      "id": "tabs",
       "plugins": {
         "xwalk": {
           "page": {
@@ -61,7 +61,7 @@
   ],
   "filters": [
     {
-      "id": "tab",
+      "id": "tabs",
       "components": [
         "tabItem"
       ]
