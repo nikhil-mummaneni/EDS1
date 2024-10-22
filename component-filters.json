@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "bread-crumb"
+      "fragment"
     ]
   },
   {
@@ -49,6 +48,12 @@
     "id": "headerbar",
     "components": [
       "headerbarItem"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabItem"
     ]
   }
 ]
