@@ -170,13 +170,6 @@
         "value": ""
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabsubhead",
-        "label": "Tab Sub Head",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "description",
         "value": "",
@@ -189,13 +182,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkname",
-        "label": "Link Name",
-        "value": ""
       },
       {
         "component": "text",
