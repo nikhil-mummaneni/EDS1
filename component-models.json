@@ -160,39 +160,6 @@
     ]
   },
   {
-    "id": "tabs",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabhead",
-        "label": "Tab Head",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "value": "",
-        "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "linkurl",
-        "value": "",
-        "label": "Link Url",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "headerbarItem",
     "fields": [
       {
@@ -245,14 +212,14 @@
     ]
   },
   {
-    "id": "menuCategory",
+    "id": "menu",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "menuCategory",
+        "name": "Menu",
         "value": "",
-        "label": "Menu Category"
+        "label": "Menu"
       }
     ]
   },
@@ -262,9 +229,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "menuItemtext",
+        "name": "MenuItem",
         "value": "",
-        "label": "Menu Item text"
+        "label": "MenuItem"
       }
     ]
   },
@@ -274,9 +241,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "subMenuItemtext",
+        "name": "SubMenuItem",
         "value": "",
-        "label": "SubMenu Item text"
+        "label": "SubMenuItems"
       },
       {
         "component": "richtext",
@@ -322,6 +289,368 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "label",
+        "name": "tab1",
+        "label": "Tab 1"
+      },
+      {
+        "tab_1": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab2",
+        "label": "Tab 2"
+      },
+      {
+        "tab_2": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab3",
+        "label": "Tab 3"
+      },
+      {
+        "tab_3": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab4",
+        "label": "Tab 4"
+      },
+      {
+        "tab_4": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab5",
+        "label": "Tab 5"
+      },
+      {
+        "tab_5": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab6",
+        "label": "Tab 6"
+      },
+      {
+        "tab_6": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "label",
+        "name": "tab7",
+        "label": "Tab 7"
+      },
+      {
+        "tab_7": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabhead",
+            "label": "Tab Head",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabsubhead",
+            "label": "Tab Sub Head",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkname",
+            "label": "Link Name",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "linkurl",
+            "value": "",
+            "label": "Link Url",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   }
