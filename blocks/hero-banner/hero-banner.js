@@ -86,6 +86,8 @@ export default function decorate(block) {
   svg.appendChild(path1);
   svg.appendChild(path2);
   parentDiv9.appendChild(svg);
+  block.parentElement.style.maxWidth = '100%';
+  block.parentElement.style.padding = '0';
   block.textContent = '';
   block.classList.add('tw');
   block.append(parentDiv);
