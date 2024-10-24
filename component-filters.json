@@ -17,7 +17,8 @@
       "columns",
       "menu",
        "tabs",
-      "hero-banner"
+      "hero-banner",
+      "page-title"
     ]
   },
   {
@@ -51,6 +52,12 @@
     "id": "tab",
     "components": [
       "tabItem"
+    ]
+  },
+  {
+    "id": "page-title",
+    "components": [
+      "pagetitleitem"
     ]
   }
 ]
