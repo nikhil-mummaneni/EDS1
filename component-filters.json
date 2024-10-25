@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "menu",
-      "tabs", 
+      "split-image-text",
+      "tabs",
       "header-bar",
       "hero-banner"
     ]
