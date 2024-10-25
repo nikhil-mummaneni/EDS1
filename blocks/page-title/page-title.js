@@ -1,7 +1,6 @@
-export default function decorate(block) {
-  
-    const pagetitleitem = document.createElement('div');
-    pagetitleitem.classList = ('page-title');
+export default function decorate(block){
 
-  }
+    const twDiv = document.createElement('div');
+  twDiv.classList.add('tw');
   
+}
