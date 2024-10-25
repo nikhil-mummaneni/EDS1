@@ -16,8 +16,10 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
-      "split-image-text"
+      "split-image-text",
+      "tabs",
+      "header-bar",
+      "hero-banner"
     ]
   },
   {
@@ -48,7 +50,7 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "tab",
     "components": [
       "tabItem"
     ]
