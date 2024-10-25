@@ -16,18 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "split-image-text",
-      "tabs",
-      "header-bar",
-      "hero-banner",
-      "horizontal-vertical"
-    ]
-  },
-  {
-    "id": "horizontal-vertical",
-    "components": [
-      "vertical-card",
-      "title-description"
+      "fragment"
     ]
   },
   {
@@ -58,9 +47,10 @@
     ]
   },
   {
-    "id": "tab",
+    "id": "horizontal-vertical",
     "components": [
-      "tabItem"
+      "vertical-card",
+      "title-description"
     ]
   }
 ]
