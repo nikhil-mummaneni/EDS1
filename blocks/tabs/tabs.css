@@ -1,1 +1,11 @@
 /* stylelint-disable no-empty-source */
+.tabs-wrapper{
+    width : 100%;
+    display:inline;
+  }
+  
+  .tabs{
+    width : 100%;
+    display:inline;
+  }
+  

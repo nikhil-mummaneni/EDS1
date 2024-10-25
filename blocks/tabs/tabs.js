@@ -1,11 +1,10 @@
-/* import { decorateIcons } from '../../scripts/aem.js'; */
-/* import { div, span } from '../../scripts/dom-builder.js'; */
+// eslint-disable-next-line no-console
+/* import * as domB from '../../scripts/dom-builder.js'; */
 
-export default function decorate(block) {
-  const tw = document.createElement('div');
-  const subATag = document.createElement('a');
-  subATag.setAttribute('href', 'http://www.sciex.com');
-  subATag.textContent = 'Test link';
-  tw.appendChild(subATag);
-  block.append(tw);
+const tabComponentSection = document.createElement('section');
+tabComponentSection.setAttribute('class', 'tw-pt-32 md:tw-pt-48 tw-pb-32 md:tw-pb-48');
+
+export default async function decorate(block) {
+  block.textContent = '';
+  block.append('Hello everyone');
 }
