@@ -1,0 +1,66 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "menu",
+      "split-image-text",
+      "tabs",
+      "header-bar",
+      "hero-banner",
+      "horizontal-vertical"
+    ]
+  },
+  {
+    "id": "horizontal-vertical",
+    "components": [
+      "vertical-card",
+      "title-description"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "headerbar",
+    "components": [
+      "headerbarItem"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tabItem"
+    ]
+  }
+]
