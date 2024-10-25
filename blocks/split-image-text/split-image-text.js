@@ -23,11 +23,9 @@ export default function decorate(block) {
   imageTag.src = image.src;
   imageDiv2.appendChild(imageTag);
 
-  const headingContainer = block.getElementsByTagName('div')[3];
-  const heading = headingContainer.querySelector('h3 strong');
-
-  const linkContainer = block.getElementsByTagName('div')[4];
-  const link = linkContainer.querySelector('h3 strong');
+  const headingContainer = block.getElementsByTagName('div')[4];
+  const heading = headingContainer.querySelector('h3');
+  const link = headingContainer.querySelector('a);
 
   const contentDiv = div({ class: 'ssplit-component-content tw-w-full md:tw-w-6/12 tw-pt-24 md:tw-pt-0 md:tw-pl-[4.1666666666667%] lg:tw-px-[4.1666666666667%] tw-flex tw-flex-col tw-justify-center' });
   parentDiv.appendChild(contentDiv);
