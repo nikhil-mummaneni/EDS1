@@ -19,7 +19,15 @@
       "split-image-text",
       "tabs",
       "header-bar",
-      "hero-banner"
+      "hero-banner",
+      "horizontal-vertical"
+    ]
+  },
+  {
+    "id": "horizontal-vertical",
+    "components": [
+      "vertical-card",
+      "title-description"
     ]
   },
   {

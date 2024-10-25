@@ -1,0 +1,151 @@
+.title-description-container {
+    padding: 20px;
+}
+
+.title-description-container h2 {
+    color: #0084a9;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.title-description-container p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #585857;
+    padding: 10px 0;
+}
+
+.horizontal-vertical-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.horizontal-vertical {
+    background-color: #E3F1F4;
+    border-top: 2px solid #007DA4;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    flex: 0 1 calc(50% - 20px);
+    margin: 10px;
+    border: none;
+    background-color: rgb(255 255 255 / 0.5);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #fff;
+}
+
+.card-image {
+    background-color: #027DA4;
+    flex: 0 0 200px;
+    max-width: 300px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+    flex: 1;
+    font-size: 0.9em;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.card-body h4 {
+    overflow-wrap: anywhere;
+    color: #5F6062;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.card-body p {
+    padding: 10px 0 0;
+}
+
+.card:hover .cta,
+.card:hover .arrow {
+    color: #d8862a;
+}
+
+.card:hover .card-image {
+    background-color: #005f75;
+}
+
+.card:hover .card-body {
+    color: #333;
+}
+
+.card-body a {
+    color: #007DA4;
+    text-decoration: none;
+}
+
+.arrow {
+    margin-left: 220px;
+    color: #3B63FB;
+    transition: color 0.3s ease;
+}
+
+.arrow-link {
+    position: relative;
+    padding-right: 230px; /* Space before the arrow */
+}
+
+.arrow-link::after {
+    content: '>'; /* Add the ">" symbol */
+    color: #007DA4; /* Same color as your original arrow */
+    position: absolute;
+    right: 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover .arrow-link::after {
+    color: #d8862a; /* Change color on hover */
+}
+
+main > .section > div {
+    padding: 30px 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 100%;
+        margin: 10px 0;
+    }
+
+    .card-body {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+
+    .arrow {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .arrow-link {
+        padding-right: 20px;
+    }
+}
