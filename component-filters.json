@@ -20,7 +20,8 @@
       "tabs",
       "header-bar",
       "hero-banner",
-      "horizontal-vertical"
+      "horizontal-vertical",
+      "page-title"
     ]
   },
   {
