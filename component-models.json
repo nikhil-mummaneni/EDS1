@@ -160,7 +160,7 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "tab",
     "fields": [
       {
         "component": "text",
@@ -374,32 +374,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "tabItem",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "icon",
-        "label": "Icon",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "iconAlt",
-        "label": "Alt Text",
-        "value": ""
       },
       {
         "component": "richtext",
