@@ -17,11 +17,11 @@
       "columns",
       "menu",
       "split-image-text",
-      "tabs",
       "header-bar",
       "hero-banner",
       "horizontal-vertical",
-      "page-title"
+      "page-title",
+      "tabs"
     ]
   },
   {
@@ -61,7 +61,7 @@
   {
     "id": "tabs",
     "components": [
-      "tab"
+      "tabItem"
     ]
   }
 ]
