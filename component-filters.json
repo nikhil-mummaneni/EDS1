@@ -61,8 +61,7 @@
   {
     "id": "tabs",
     "components": [
-      "tabItem",
-      "headerbarItem"
+      "tabItem"
     ]
   }
 ]
