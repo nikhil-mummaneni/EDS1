@@ -16,19 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "split-image-text",
-      "tabs",
-      "header-bar",
-      "hero-banner",
-      "horizontal-vertical",
-      "page-title"
-    ]
-  },
-  {
-    "id": "horizontal-vertical",
-    "components": [
-      "vertical-card",
-      "title-description"
+      "fragment"
     ]
   },
   {
@@ -56,6 +44,26 @@
     "id": "headerbar",
     "components": [
       "headerbarItem"
+    ]
+  },
+  {
+    "id": "horizontal-vertical",
+    "components": [
+      "vertical-card",
+      "title-description"
+    ]
+  },
+  {
+    "id": "menu",
+    "components": [
+      "menuItem",
+      "subItem"
+    ]
+  },
+  {
+    "id": "menuItem",
+    "components": [
+      "subItem"
     ]
   },
   {
