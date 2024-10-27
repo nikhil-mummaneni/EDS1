@@ -1,1 +1,4 @@
-
+export default async function decorate(block) {
+  block.textContent = '';
+  block.append('Hello everyone');
+}
