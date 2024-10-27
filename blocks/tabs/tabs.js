@@ -1,4 +1,4 @@
-export default async function decorate(block) {
-  block.textContent = '';
-  block.append('Hello everyone');
+export default function decorate(block) {
+  const tw = document.createElement('div');
+  block.append(tw);
 }
