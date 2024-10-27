@@ -16,7 +16,13 @@
       "cards",
       "columns",
       "menu",
-      "fragment"
+      "split-image-text",
+      "tabs",
+      "header-bar",
+      "hero-banner",
+      "horizontal-vertical",
+      "page-title",
+      "horizontal-tabs"
     ]
   },
   {
