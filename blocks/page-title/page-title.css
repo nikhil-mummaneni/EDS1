@@ -5,13 +5,11 @@
     padding: 10px;
     height: 280px;
 }
-
 .page-title-image {
     width: 80px;
     height: auto;
     flex-basis: 20%;
 }
-
 .page-title-text h1 {
     color: #0084a9;
     font-size: 2.3rem;
