@@ -45,9 +45,6 @@ export default function decorate(blockElement) {
     ul.append(li);
   });
 
-  blockElement.textContent = '';
-  blockElement.append(titleDescriptionDiv, ul);
-
   // Replace images with optimized versions
   ul.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
