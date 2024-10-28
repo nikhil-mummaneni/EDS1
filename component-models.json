@@ -370,7 +370,7 @@
     ]
   },
   {
-    "id": "tab",
+    "id": "tabItem",
     "fields": [
       {
         "component": "text",
