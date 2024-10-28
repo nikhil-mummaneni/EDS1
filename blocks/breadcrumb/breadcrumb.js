@@ -24,7 +24,7 @@ const getAllPathsExceptCurrent = async (paths) => {
     const url = `${window.location.origin}${path}`;
 
     // Push the promise to the array
-    fetchPromises.push(getPageTitle(url).then(name => {
+    fetchPromises.push(getPageTitle(url).then((name) => {
       if (name) {
         result.push({ path, name, url });
       }
