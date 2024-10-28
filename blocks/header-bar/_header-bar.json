@@ -2,7 +2,7 @@
   "definitions": [
     {
       "title": "Header Bar",
-      "id": "headerbar",
+      "id": "header-bar",
       "plugins": {
         "xwalk": {
           "page": {
@@ -61,7 +61,7 @@
   ],
   "filters": [
     {
-      "id": "headerbar",
+      "id": "header-bar",
       "components": [
         "headerbarItem"
       ]
