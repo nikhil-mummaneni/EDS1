@@ -22,7 +22,7 @@ const getAllPathsExceptCurrent = async (paths) => {
     const path = `${prevPath}.html`;
     const url = `${window.location.origin}${path}`;
 
-    const name = getPageTitle(url);
+    const name = await getPageTitle(url);
     if (name) {
       result.push({ path, name, url });
     }
