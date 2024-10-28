@@ -8,7 +8,7 @@
   {
     "id": "section",
     "components": [
-      "text",
+     "text",
       "image",
       "button",
       "title",
@@ -16,7 +16,13 @@
       "cards",
       "columns",
       "menu",
-      "fragment"
+      "split-image-text",
+      "header-bar",
+      "hero-banner",
+      "horizontal-vertical",
+      "page-title",
+      "tabs",
+      "breadcrumb"
     ]
   },
   {
