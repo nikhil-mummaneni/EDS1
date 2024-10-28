@@ -285,7 +285,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "MenuText",
+        "name": "menutext",
         "value": "",
         "label": "Menu Text",
         "valueType": "string"
@@ -297,7 +297,7 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "subItemText",
+        "name": "subitemtext",
         "value": "",
         "label": "Sub Item Text",
         "valueType": "string",
@@ -317,7 +317,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "MenuItemText",
+        "name": "menuitemtext",
         "value": "",
         "label": "Menu Item Text",
         "valueType": "string"
