@@ -15,6 +15,7 @@ const getAllPathsExceptCurrent = async (paths) => {
   const pathsList = paths.replace(/^\/|\/$/g, '').split('/');
 
   let prevPath = '';
+  const fetchPromises = [];
 
   for (let i = 0; i < pathsList.length - 1; i += 1) {
     const pathPart = pathsList[i];
@@ -22,11 +23,15 @@ const getAllPathsExceptCurrent = async (paths) => {
     const path = `${prevPath}.html`;
     const url = `${window.location.origin}${path}`;
 
-    const name = await getPageTitle(url);
-    if (name) {
-      result.push({ path, name, url });
-    }
+    // Push the promise to the array
+    fetchPromises.push(getPageTitle(url).then(name => {
+      if (name) {
+        result.push({ path, name, url });
+      }
+    }));
   }
+
+  await Promise.all(fetchPromises);
 
   return result;
 };
