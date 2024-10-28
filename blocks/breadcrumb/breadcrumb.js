@@ -23,7 +23,6 @@ const getAllPathsExceptCurrent = async (paths) => {
     const url = `${window.location.origin}${path}`;
 
     const name = await getPageTitle(url);
-     console.log("name",name);
     if (name) {
       result.push({ path, name, url });
     }
@@ -31,7 +30,6 @@ const getAllPathsExceptCurrent = async (paths) => {
 
   return result;
 };
-
 
 const createLink = (path) => {
   const pathLink = document.createElement('a');
@@ -62,11 +60,9 @@ export default async function decorate(block) {
     currentPath.style.color = 'black';
     breadcrumbLinks.push(currentPath.outerHTML);
 
-    const separator = `<span class="breadcrumb-separator">></span>`;
+    const separator = '<span class="breadcrumb-separator">></span>';
 
     breadcrumb.innerHTML = breadcrumbLinks.join(separator);
     block.append(breadcrumb);
   }, 1000);
 }
-
-
