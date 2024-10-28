@@ -72,5 +72,11 @@
     "components": [
       "reference"
     ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
+    ]
   }
 ]
