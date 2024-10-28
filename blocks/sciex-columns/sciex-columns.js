@@ -5,14 +5,7 @@ export default function decorate(blockElement) {
   const ul = document.createElement('ul');
   ul.className = 'card-list';
 
-  const titleDescriptionDiv = document.createElement('div');
-  titleDescriptionDiv.className = 'title-description-container';
-
   [...blockElement.children].forEach((rowElement) => {
-    if (rowElement.dataset.aueModel === 'title-description') {
-      titleDescriptionDiv.append(rowElement);
-      return;
-    }
 
     const li = document.createElement('li');
     li.className = 'card';
@@ -33,13 +26,6 @@ export default function decorate(blockElement) {
           button.remove();
         }
         const anchor = div.querySelector('a');
-
-        const horizontalLine = document.createElement('div');
-        horizontalLine.className = 'horizontal-line';
-        horizontalLine.style.borderTop = '1px solid #ccc';
-        horizontalLine.style.margin = '10px 0';
-
-        div.append(horizontalLine);
 
         if (anchor) {
           const anchorContainerDiv = document.createElement('div');
