@@ -160,65 +160,6 @@
     ]
   },
   {
-    "id": "tabItem",
-    "fields": [
-       {
-            "component": "text",
-            "valueType": "string",
-            "name": "tabhead",
-            "label": "Tab Head",
-            "value": ""
-          },
-          {
-            "component": "richtext",
-            "name": "description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
-          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "multi": false
-          },
-          {
-            "component": "text",
-            "name": "linkurl",
-            "value": "",
-            "label": "Link Url",
-            "valueType": "string"
-          }
-    ]
-  },
-  {
-    "id": "page-title",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "text",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "headerbarItem",
     "fields": [
       {
@@ -340,6 +281,50 @@
     ]
   },
   {
+    "id": "menu",
+    "fields": [
+      {
+        "component": "text",
+        "name": "MenuText",
+        "value": "",
+        "label": "Menu Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "subItem",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "subItemText",
+        "value": "",
+        "label": "Sub Item Text",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "menuItem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "MenuItemText",
+        "value": "",
+        "label": "Menu Item Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "sciex-hero",
     "fields": [
       {
@@ -380,6 +365,39 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabItem",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabhead",
+        "label": "Tab Head",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkurl",
+        "value": "",
+        "label": "Link Url",
         "valueType": "string"
       }
     ]

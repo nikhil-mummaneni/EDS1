@@ -1,0 +1,108 @@
+{
+  "definitions": [
+    {
+      "title": "Menu",
+      "id": "menu",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Menu",
+              "filter": "menu"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "MenuItem",
+      "id": "menuItem",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "MenuItem",
+              "model": "menuItem"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "SubItem",
+      "id": "subItem",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "SubItem",
+              "model": "subItem"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "menu",
+      "fields": [
+        {
+          "component": "text",
+          "name": "MenuText",
+          "value": "",
+          "label": "Menu Text",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "subItem",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "subItemText",
+          "value": "",
+          "label": "Sub Item Text",
+          "valueType": "string",
+		  "multi": true
+        }, {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": true
+        }
+      ]
+    },
+    {
+      "id": "menuItem",
+      "fields": [
+		{
+          "component": "text",
+          "name": "MenuItemText",
+          "value": "",
+          "label": "Menu Item Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "menu",
+      "components": [
+        "menuItem",
+        "subItem"
+      ]
+    },{
+      "id": "menuItem",
+      "components": [
+        "subItem"
+      ]
+    }
+  ]
+}
