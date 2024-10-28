@@ -86,4 +86,5 @@ div a:hover {
 @media (max-width: 768px) {
     .header-bar {
         display: none;
-}
+ }
+}    
