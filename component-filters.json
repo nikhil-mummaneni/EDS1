@@ -8,7 +8,7 @@
   {
     "id": "section",
     "components": [
-      "text",
+     "text",
       "image",
       "button",
       "title",
@@ -21,7 +21,8 @@
       "hero-banner",
       "horizontal-vertical",
       "page-title",
-      "tabs"
+      "tabs",
+      "breadcrumb"
     ]
   },
   {
@@ -46,7 +47,7 @@
     ]
   },
   {
-    "id": "headerbar",
+    "id": "header-bar",
     "components": [
       "headerbarItem"
     ]

@@ -3,6 +3,8 @@ import {
 } from '../../scripts/dom-builder.js';
 
 export default function decorate(block) {
+  if (!block) return; // Check if block exists
+
   const childrenDivs = block.children;
   const header = document.createElement('div');
   header.classList.add('header-bar');
@@ -12,7 +14,9 @@ export default function decorate(block) {
   const nav = document.createElement('div');
   nav.classList.add('navLinks-bar');
 
-  Array.from(childrenDivs).forEach((childDiv, index) => { // Renamed to childDiv
+  Array.from(childrenDivs).forEach((childDiv, index) => {
+    if (!childDiv) return; // Check if childDiv exists
+
     const picture = childDiv.querySelector('picture');
     const buttonContainer = childDiv.querySelector('.button-container');
     const img = picture ? picture.querySelector('img') : null;
@@ -28,7 +32,8 @@ export default function decorate(block) {
       if (img) {
         const newimg = document.createElement('img');
         newimg.src = img.src;
-        newimg.alt = img.alt;
+        newimg.alt = img.alt || 'Logo'; // Add alt attribute for accessibility
+
         if (index === 0) {
           const logoLink = document.createElement('a');
           logoLink.href = cta.href;
@@ -53,8 +58,12 @@ export default function decorate(block) {
     lastAnchor.classList.add('last-item');
   }
 
-  header.appendChild(logoDiv);
-  header.appendChild(nav);
+  // Only append nav if it has child elements
+  if (nav.children.length > 0) {
+    header.appendChild(logoDiv);
+    header.appendChild(nav);
+  }
+
   block.parentElement.style.maxWidth = '100%';
   block.parentElement.style.padding = '0';
   block.textContent = '';
