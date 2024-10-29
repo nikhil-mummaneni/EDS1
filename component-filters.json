@@ -62,8 +62,7 @@
   {
     "id": "menu",
     "components": [
-      "menuItem",
-      "subItem"
+      "menuItem"
     ]
   },
   {
