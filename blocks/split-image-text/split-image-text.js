@@ -5,21 +5,21 @@ import {
 // breadcrumb functionality implementation
 export default function decorate(block) {
   const sectionDiv = document.createElement('section');
-  sectionDiv.className = 'split-component-right tw-pt-32 md:tw-pt-48 tw-pb-32 md:tw-pb-48';
-  const parentDiv = div({ class: 'tw-container tw-flex tw-flex-col md:tw-flex-row md:tw-justify-between' });
+  sectionDiv.className = 'split-component-right gl-pt-32 md:gl-pt-48 gl-pb-32 md:gl-pb-48';
+  const parentDiv = div({ class: 'gl-container gl-flex gl-flex-col md:gl-flex-row md:gl-justify-begleen' });
   sectionDiv.appendChild(parentDiv);
-  const imageDiv = div({ class: 'split-component-image tw-w-full md:tw-w-6/12 tw-flex tw-flex-col tw-justify-center' });
+  const imageDiv = div({ class: 'split-component-image gl-w-full md:gl-w-6/12 gl-flex gl-flex-col gl-justify-center' });
   parentDiv.appendChild(imageDiv);
   const imageDiv1 = div({ class: 'atomic-child' });
   imageDiv.appendChild(imageDiv1);
-  const imageDiv2 = div({ class: 'tw-pb-16 md:tw-pb-20' });
+  const imageDiv2 = div({ class: 'gl-pb-16 md:gl-pb-20' });
   imageDiv1.appendChild(imageDiv2);
 
   const container = block.querySelector('div');
   const contentContainer = container.querySelector('div');
   const image = contentContainer.querySelector('picture > img');
   const imageTag = document.createElement('img');
-  imageTag.className = 'tw-aspect-4/3';
+  imageTag.className = 'gl-aspect-4/3';
   imageTag.src = image.src;
   imageDiv2.appendChild(imageTag);
 

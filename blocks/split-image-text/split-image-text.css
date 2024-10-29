@@ -1,0 +1,94 @@
+ .gl-container{
+     width: 100%;
+     margin-right: auto;
+     margin-left: auto;
+     padding-right: 24px;
+     padding-left: 24px;
+}
+ .gl-pt-32{
+     padding-top: 32px;
+}
+ .gl-pt-48{
+     padding-top: 48px;
+}
+ .gl-pb-32{
+     padding-bottom: 32px;
+}
+ .gl-pb-48{
+     padding-bottom: 48px;
+}
+ .gl-flex-col{
+     flex-direction: column;
+}
+ .gl-flex{
+     display: flex;
+}
+ .gl-flex-row{
+     flex-direction: row;
+}
+ .gl-justify-between{
+     justify-content: space-between;
+}
+ .gl-w-full{
+     width: 100%;
+}
+ .gl-flex{
+     display: flex;
+}
+ .gl-flex-col{
+     flex-direction: column;
+}
+ .gl-justify-center{
+     justify-content: center;
+}
+ .gl-w-6\/12{
+     width: 50%;
+}
+ .gl-flex{
+     display: flex;
+}
+ .gl-flex-col{
+     flex-direction: column;
+}
+ .gl-justify-center{
+     justify-content: center;
+}
+ .gl-pb-16{
+     padding-bottom: 16px;
+}
+ .gl-pb-20{
+     padding-bottom: 20px;
+}
+ .gl-w-full{
+     width: 100%;
+}
+ .gl-pt-24{
+     padding-top: 24px;
+}
+ .gl-aspect-4\/3{
+     aspect-ratio: 4 / 3;
+}
+ .gl-w-6\/12{
+     width: 50%;
+}
+ .md\:gl-pt-0{
+     padding-top: 0;
+}
+ .md\:gl-w-full{
+     width: 100%;
+}
+ .md\:gl-flex-row{
+     flex-direction: row;
+}
+ .md\:gl-pb-48{
+     padding-bottom: 48px;
+}
+ .md\:gl-justify-between{
+     justify-content: space-between;
+}
+ .md\:gl-w-6\/12{
+     width: 50%;
+}
+ .lg\:gl-w-6\/12{
+     width: 50%;
+}
