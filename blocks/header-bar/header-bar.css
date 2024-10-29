@@ -1,7 +1,7 @@
 .header-bar {
     max-width: 100%;
-    background-color: rgb(20, 20, 20);
-    padding: 0px 0px 0px 119px;
+    background-color: rgb(20 20 20);
+    padding: 0 0 0 119px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ div a {
     text-decoration: none !important;
     transition: color 0.3s;
     font-size: 16px;
-    color: rgba(161, 161, 161, var(--tw-text-opacity)) !important;
+    color: rgb(161 161 161 / var(--tw-text-opacity)) !important;
 }
 div a:hover {
     color: white !important;
@@ -34,7 +34,7 @@ div a:hover {
     display: flex;
     gap: 30px;
     margin-left: auto;
-    padding: 0px 0px 0px 482px;
+    padding: 0 0 0 482px;
 }
 .navLinks-bar img {
     margin-right: 5px;
@@ -59,7 +59,7 @@ div a:hover {
 }
 @media (max-width: 1024px) {
     .header-bar {
-        padding: 0 0px;
+        padding: 0;
         flex-direction: row;
         justify-content: space-between;
     }
