@@ -1,6 +1,4 @@
-import {
-  div,
-} from '../../scripts/dom-builder.js';
+import { div } from '../../scripts/dom-builder.js';
 
 export default function decorate(block) {
   if (!block) return; // Check if block exists
@@ -8,9 +6,7 @@ export default function decorate(block) {
   const childrenDivs = block.children;
   const header = document.createElement('div');
   header.classList.add('header-bar');
-  const logoDiv = div({
-    class: 'logo',
-  });
+  const logoDiv = div({ class: 'logo' });
   const nav = document.createElement('div');
   nav.classList.add('navLinks-bar');
 
@@ -23,31 +19,31 @@ export default function decorate(block) {
     const cta = buttonContainer ? buttonContainer.querySelector('a.button') : null;
 
     if (cta) {
-      const a = document.createElement('a');
-      const span = document.createElement('span');
-      a.href = cta.href;
-      a.target = '_blank';
-      span.textContent = cta.textContent;
+      const linkElement = document.createElement('a');
+      const spanElement = document.createElement('span');
+      linkElement.href = cta.href;
+      linkElement.target = '_blank';
+      spanElement.textContent = cta.textContent;
 
       if (img) {
-        const newimg = document.createElement('img');
-        newimg.src = img.src;
-        newimg.alt = img.alt || 'Logo'; // Add alt attribute for accessibility
+        const newImg = document.createElement('img');
+        newImg.src = img.src;
+        newImg.alt = img.alt || 'Logo'; // Add alt attribute for accessibility
 
         if (index === 0) {
           const logoLink = document.createElement('a');
           logoLink.href = cta.href;
           logoLink.target = '_blank';
-          logoLink.appendChild(newimg);
+          logoLink.appendChild(newImg);
           logoDiv.appendChild(logoLink);
         } else {
-          a.appendChild(newimg);
+          linkElement.appendChild(newImg);
         }
       }
 
       if (index >= 1) {
-        a.appendChild(span);
-        nav.appendChild(a);
+        linkElement.appendChild(spanElement);
+        nav.appendChild(linkElement);
       }
     }
   });
@@ -64,8 +60,15 @@ export default function decorate(block) {
     header.appendChild(nav);
   }
 
+  // Styling adjustments for parent element
   block.parentElement.style.maxWidth = '100%';
   block.parentElement.style.padding = '0';
-  block.textContent = '';
+
+  // Clear only specific children or hide content during rendering
+  Array.from(block.children).forEach((child) => {
+    child.style.display = 'none'; // Hide each child element for rendering
+  });
+
+  // Append the new header content
   block.append(header);
 }
