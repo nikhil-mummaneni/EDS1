@@ -5,21 +5,21 @@ import {
 // breadcrumb functionality implementation
 export default function decorate(block) {
   const sectionDiv = document.createElement('section');
-  sectionDiv.className = 'split-component-right tw-pt-32 md:tw-pt-48 tw-pb-32 md:tw-pb-48';
-  const parentDiv = div({ class: 'tw-container tw-flex tw-flex-col md:tw-flex-row md:tw-justify-between' });
+  sectionDiv.className = 'split-component-right global-pt-32 md:global-pt-48 global-pb-32 md:global-pb-48';
+  const parentDiv = div({ class: 'global-container global-flex global-flex-col md:global-flex-row md:global-justify-between' });
   sectionDiv.appendChild(parentDiv);
-  const imageDiv = div({ class: 'split-component-image tw-w-full md:tw-w-6/12 tw-flex tw-flex-col tw-justify-center' });
+  const imageDiv = div({ class: 'split-component-image global-w-full md:global-w-6/12 global-flex global-flex-col global-justify-center' });
   parentDiv.appendChild(imageDiv);
   const imageDiv1 = div({ class: 'atomic-child' });
   imageDiv.appendChild(imageDiv1);
-  const imageDiv2 = div({ class: 'tw-pb-16 md:tw-pb-20' });
+  const imageDiv2 = div({ class: 'global-pb-16 md:global-pb-20' });
   imageDiv1.appendChild(imageDiv2);
 
   const container = block.querySelector('div');
   const contentContainer = container.querySelector('div');
   const image = contentContainer.querySelector('picture > img');
   const imageTag = document.createElement('img');
-  imageTag.className = 'tw-aspect-4/3';
+  imageTag.className = 'global-aspect-4/3';
   imageTag.src = image.src;
   imageDiv2.appendChild(imageTag);
 
@@ -27,31 +27,31 @@ export default function decorate(block) {
   const heading = headingContainer.querySelector('h3');
   const link = headingContainer.querySelector('a');
 
-  const contentDiv = div({ class: 'ssplit-component-content tw-w-full md:tw-w-6/12 tw-pt-24 md:tw-pt-0 md:tw-pl-[4.1666666666667%] lg:tw-px-[4.1666666666667%] tw-flex tw-flex-col tw-justify-center' });
+  const contentDiv = div({ class: 'split-component-content global-w-full md:global-w-6/12 global-pt-24 md:global-pt-0 md:global-pl-[4.1666666666667%] lg:global-px-[4.1666666666667%] global-flex global-flex-col global-justify-center' });
   parentDiv.appendChild(contentDiv);
   const contnetDiv1 = div({ class: 'atomic-child' });
   contentDiv.appendChild(contnetDiv1);
-  const headingdiv = div({ class: 'atomic-heading-minimal tw-pb-16 md:tw-pb-20' });
+  const headingdiv = div({ class: 'atomic-heading-minimal global-pb-16 md:global-pb-20' });
   contnetDiv1.appendChild(headingdiv);
   const h3tag = document.createElement('h3');
-  h3tag.className = 'text-delta tw-text-grey-900 tw-break-words';
+  h3tag.className = 'text-delta global-text-grey-900 global-break-words';
   h3tag.textContent = heading.textContent;
   headingdiv.appendChild(h3tag);
 
   const contnetDiv2 = div({ class: 'atomic-child' });
   contentDiv.appendChild(contnetDiv2);
-  const buttonDiv1 = div({ class: 'atomic-buttons | tw-inline-flex tw-w-full md:tw-w-auto md:tw-flex tw-items-center tw-flex-wrap tw-gap-x-16 tw-gap-y-16 tw-pb-16 md:tw-pb-20' });
+  const buttonDiv1 = div({ class: 'atomic-buttons | global-inline-flex global-w-full md:global-w-auto md:global-flex global-items-center global-flex-wrap global-gap-x-16 global-gap-y-16 global-pb-16 md:global-pb-20' });
   contnetDiv2.appendChild(buttonDiv1);
-  const buttonDiv2 = div({ class: 'tw-w-full md:tw-w-auto' });
+  const buttonDiv2 = div({ class: 'global-w-full md:global-w-auto' });
   buttonDiv1.appendChild(buttonDiv2);
   const anchorTag = document.createElement('a');
-  anchorTag.className = 'tw-text-mobBase md:tw-text-base tw-inline-block focus-visible:tw-outline-none tw-whitespace-nowrap focus-visible:tw-ring-offset-2 focus-visible:tw-ring-2 focus-visible:tw-ring-blue-700 tw-rounded tw-border tw-py-12 tw-px-16 md:tw-px-20 active:tw-bg-blue-900 tw-border-blue-700 tw-text-white tw-bg-gradient-to-r tw-bg-blue-700 tw-from-blue-800 tw-via-blue-800 tw-to-blue-800 tw-bg-bottom tw-bg-no-repeat tw-bg-[length:100%_0px] hover:tw-bg-[length:100%_100%] tw-transition-all motion-reduce:tw-transition-none tw-w-full md:tw-w-auto';
+  anchorTag.className = 'global-text-mobBase md:global-text-base global-inline-block focus-visible:global-outline-none global-whitespace-nowrap focus-visible:global-ring-offset-2 focus-visible:global-ring-2 focus-visible:global-ring-blue-700 global-rounded global-border global-py-12 global-px-16 md:global-px-20 active:global-bg-blue-900 global-border-blue-700 global-text-white global-bg-gradient-to-r global-bg-blue-700 global-from-blue-800 global-via-blue-800 global-to-blue-800 global-bg-bottom global-bg-no-repeat global-bg-[length:100%_0px] hover:global-bg-[length:100%_100%] global-transition-all motion-reduce:global-transition-none global-w-full md:global-w-auto';
   anchorTag.href = link.href;
   buttonDiv2.appendChild(anchorTag);
 
-  const anchorDiv = div({ class: 'tw-flex tw-items-center tw-justify-between' });
+  const anchorDiv = div({ class: 'global-flex global-items-center global-justify-between' });
   anchorTag.appendChild(anchorDiv);
-  const spantag = span({ class: 'tw-whitespace-normal tw-text-left' });
+  const spantag = span({ class: 'global-whitespace-normal global-text-left' });
   spantag.textContent = link.textContent;
   anchorDiv.appendChild(spantag);
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -59,7 +59,7 @@ export default function decorate(block) {
   svg.setAttribute('height', '14');
   svg.setAttribute('viewBox', '0 0 16 14');
   svg.setAttribute('fill', 'none');
-  svg.setAttribute('class', 'tw-block tw-ml-16 tw-flex-shrink-0');
+  svg.setAttribute('class', 'global-block global-ml-16 global-flex-shrink-0');
   svg.setAttribute('data-di-rand', '1728544798255');
   const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   path1.setAttribute('d', 'M0 7L15 7');

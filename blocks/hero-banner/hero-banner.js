@@ -5,15 +5,15 @@ import {
 
 export default function decorate(block) {
   // Main wrapper container
-  const wrapper = div({ class: 'tw-pb-32 md:tw-pb-48' });
+  const wrapper = div({ class: 'global-pb-32 md:global-pb-48' });
 
   // Background section container with styling for alignment
   const backgroundSection = document.createElement('section');
-  backgroundSection.className = 'tw-relative tw-bg-cover tw-bg-center tw-bg-no-repeat';
+  backgroundSection.className = 'global-relative global-bg-cover global-bg-center global-bg-no-repeat';
   wrapper.appendChild(backgroundSection);
 
   // Primary content container with min-height
-  const contentContainer = div({ class: 'tw-relative tw-min-h-[420px] md:tw-min-h-[512px]' });
+  const contentContainer = div({ class: 'global-relative global-min-h-[420px] md:global-min-h-[512px]' });
   backgroundSection.appendChild(contentContainer);
 
   const blockContainer = block.querySelector('div');
@@ -22,50 +22,50 @@ export default function decorate(block) {
   // Handle the background image setup
   const backgroundImage = innerContainer.querySelector('picture');
   if (backgroundImage) {
-    backgroundImage.className = 'tw-absolute tw-object-cover tw-h-full tw-w-full tw-z-0';
+    backgroundImage.className = 'global-absolute global-object-cover global-h-full global-w-full global-z-0';
     contentContainer.appendChild(backgroundImage);
   }
 
   // Add overlay to enhance text readability
   const overlay = div({
-    class: 'tw-absolute tw-bg-black tw-opacity-40 tw-top-0 tw-left-0 tw-right-0 tw-bottom-0 tw-z-0',
+    class: 'global-absolute global-bg-black global-opacity-40 global-top-0 global-left-0 global-right-0 global-bottom-0 global-z-0',
   });
   contentContainer.appendChild(overlay);
 
   // Container for content layout
   const contentWrapper = div({
-    class: 'tw-relative tw-container tw-py-40 md:tw-pb-64 tw-flex tw-items-end tw-w-full tw-min-h-[420px] md:tw-min-h-[512px] tw-z-10 md:tw-pt-80',
+    class: 'global-relative global-container global-py-40 md:global-pb-64 global-flex global-items-end global-w-full global-min-h-[420px] md:global-min-h-[512px] global-z-10 md:global-pt-80',
   });
   contentContainer.appendChild(contentWrapper);
 
   // Inner container for flex layout
   const flexContainer = div({
-    class: 'tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-w-full tw-items-end tw-text-white',
+    class: 'global-flex global-flex-col md:global-flex-row global-justify-between global-w-full global-items-end global-text-white',
   });
   contentWrapper.appendChild(flexContainer);
 
-  const textContainer = div({ class: 'tw-w-full' });
+  const textContainer = div({ class: 'global-w-full' });
   flexContainer.appendChild(textContainer);
 
   // Add heading and paragraph
   const heading = block.querySelector('h1');
   const headingElement = document.createElement('h1');
-  headingElement.className = 'text-bravo lg:tw-max-w-9/12 xl:tw-max-w-8/12 tw-mt-16 md:tw-mt-20';
+  headingElement.className = 'text-bravo lg:global-max-w-9/12 xl:global-max-w-8/12 global-mt-16 md:global-mt-20';
   headingElement.textContent = heading.textContent;
   textContainer.appendChild(headingElement);
 
   const paragraph = block.querySelector('p');
   const paragraphContainer = div({
-    class: 'atomic-richtext-content text-base tw-mt-16 md:tw-mt-20 lg:tw-max-w-6/12 xl:tw-max-w-5/12',
+    class: 'atomic-richtext-content text-base global-mt-16 md:global-mt-20 lg:global-max-w-6/12 xl:global-max-w-5/12',
   });
   paragraphContainer.textContent = paragraph.textContent;
   textContainer.appendChild(paragraphContainer);
 
   // CTA section setup
-  const ctaWrapper = div({ class: 'md:tw-flex md:tw-items-center md:tw-space-x-16' });
+  const ctaWrapper = div({ class: 'md:global-flex md:global-items-center md:global-space-x-16' });
   textContainer.appendChild(ctaWrapper);
 
-  const ctaContainer = div({ class: 'tw-mt-16 md:tw-mt-20' });
+  const ctaContainer = div({ class: 'global-mt-16 md:global-mt-20' });
   ctaWrapper.appendChild(ctaContainer);
 
   const linkElement = document.querySelector('a');
@@ -73,13 +73,13 @@ export default function decorate(block) {
   const linkText = linkElement.textContent;
 
   const ctaLink = document.createElement('a');
-  ctaLink.className = 'tw-text-mobBase md:tw-text-base tw-inline-block focus-visible:tw-outline-none tw-whitespace-nowrap focus-visible:tw-ring-offset-2 focus-visible:tw-ring-2 focus-visible:tw-ring-blue-700 tw-rounded tw-border tw-py-12 tw-px-16 md:tw-px-20 active:tw-bg-blue-900 tw-border-blue-700 tw-text-white tw-bg-gradient-to-r tw-bg-blue-700 tw-from-blue-800 tw-via-blue-800 tw-to-blue-800 tw-bg-bottom tw-bg-no-repeat tw-bg-[length:100%_0px] hover:tw-bg-[length:100%_100%] tw-transition-all motion-reduce:tw-transition-none tw-w-full md:tw-w-auto';
+  ctaLink.className = 'global-text-mobBase md:global-text-base global-inline-block focus-visible:global-outline-none global-whitespace-nowrap focus-visible:global-ring-offset-2 focus-visible:global-ring-2 focus-visible:global-ring-blue-700 global-rounded global-border global-py-12 global-px-16 md:global-px-20 active:global-bg-blue-900 global-border-blue-700 global-text-white global-bg-gradient-to-r global-bg-blue-700 global-from-blue-800 global-via-blue-800 global-to-blue-800 global-bg-bottom global-bg-no-repeat global-bg-[length:100%_0px] hover:global-bg-[length:100%_100%] global-transition-all motion-reduce:global-transition-none global-w-full md:global-w-auto';
   ctaLink.href = href;
 
-  const ctaLinkInnerContainer = div({ class: 'tw-flex tw-items-center tw-justify-between' });
+  const ctaLinkInnerContainer = div({ class: 'global-flex global-items-center global-justify-between' });
   ctaLink.appendChild(ctaLinkInnerContainer);
 
-  const ctaText = span({ class: 'tw-whitespace-normal tw-text-left' });
+  const ctaText = span({ class: 'global-whitespace-normal global-text-left' });
   ctaText.textContent = linkText;
   ctaLinkInnerContainer.appendChild(ctaText);
 
@@ -91,7 +91,7 @@ export default function decorate(block) {
   svgIcon.setAttribute('height', '14');
   svgIcon.setAttribute('viewBox', '0 0 16 14');
   svgIcon.setAttribute('fill', 'none');
-  svgIcon.setAttribute('class', 'tw-block tw-ml-16 tw-flex-shrink-0');
+  svgIcon.setAttribute('class', 'global-block global-ml-16 global-flex-shrink-0');
   svgIcon.setAttribute('data-di-rand', '1728544798255');
 
   const linePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -110,6 +110,6 @@ export default function decorate(block) {
   block.parentElement.style.maxWidth = '100%';
   block.parentElement.style.padding = '0';
   block.textContent = '';
-  block.classList.add('tw');
+  block.classList.add('global');
   block.append(wrapper);
 }
