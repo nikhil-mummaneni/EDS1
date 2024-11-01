@@ -3,12 +3,12 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(blockElement) {
   const ul = document.createElement('ul');
-  ul.className = 'card-list';
+  ul.className = 'cards-list';
 
   // Iterate over each child row of the blockElement to create cards
   [...blockElement.children].forEach((rowElement) => {
     const li = document.createElement('li');
-    li.className = 'card';
+    li.className = 'cards-item';
 
     // Move any instrumentation attributes from rowElement to li
     moveInstrumentation(rowElement, li);
@@ -22,10 +22,10 @@ export default function decorate(blockElement) {
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) {
         // Image container
-        div.className = 'card-image';
+        div.className = 'cards-card-image';
       } else {
         // Body container
-        div.className = 'card-body';
+        div.className = 'cards-card-body';
 
         // Remove any existing button and add CTA link if present
         const button = div.querySelector('button');
@@ -41,7 +41,7 @@ export default function decorate(blockElement) {
           const anchorText = anchor.textContent || 'Learn More';
           const anchorHref = anchor.href || '#';
 
-          anchor.classList.add('cta', 'arrow-link');
+          anchor.classList.add('cta');
           anchor.href = anchorHref;
           anchor.textContent = anchorText;
           anchorContainerDiv.append(anchor);
