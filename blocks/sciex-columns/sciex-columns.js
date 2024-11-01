@@ -12,7 +12,9 @@ function transformSciexColumnsToCards() {
     blockDiv.setAttribute('data-block-name', 'cards');
     blockDiv.setAttribute('data-block-status', 'loaded');
 
+    // Create unordered list to hold card items and apply grid layout
     const ul = document.createElement('ul');
+    ul.classList.add('cards-list');
 
     // Select all individual cards
     const cards = sciexWrapper.querySelectorAll('[data-aue-model="card"]');
@@ -20,6 +22,7 @@ function transformSciexColumnsToCards() {
     cards.forEach((card) => {
         // Create list item for each card
         const li = document.createElement('li');
+        li.classList.add('cards-item');
 
         // Extract image information
         const imgElement = card.querySelector('img');
@@ -28,7 +31,7 @@ function transformSciexColumnsToCards() {
 
         // Create image container div
         const imageDiv = document.createElement('div');
-        imageDiv.classList.add('cards-card-image', 'tw-mb-16', 'md:tw-mb-20');
+        imageDiv.classList.add('cards-card-image');
 
         // Create picture element with source and img tags
         const picture = document.createElement('picture');

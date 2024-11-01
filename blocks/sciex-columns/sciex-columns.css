@@ -4,8 +4,27 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
   gap: 24px;
+}
+
+/* Make it responsive: 2 columns on small screens, 3 on medium, 4 on large */
+@media (max-width: 1024px) {
+  .cards-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-list {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+  }
 }
 
 /* Card item styling */
