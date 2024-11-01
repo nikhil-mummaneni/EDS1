@@ -5,7 +5,6 @@ export default function decorate(blockElement) {
   const ul = document.createElement('ul');
   ul.className = 'cards-list';
 
-  // Iterate over each child row of the blockElement to create cards
   [...blockElement.children].forEach((rowElement) => {
     const li = document.createElement('li');
     li.className = 'cards-item';
