@@ -61,11 +61,19 @@
 .cards-card-body h3 {
   font-size: 1.25rem;
   margin: 0;
+  padding: 15px 0px;
 }
 
 .cards-card-body p {
   flex-grow: 1;
   margin: 0;
+}
+
+/* Anchor container styling */
+.anchor-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Vertically center the anchors */
+  margin-top: 16px; /* Space between the body content and anchor container */
 }
 
 /* CTA link styling */
@@ -80,7 +88,7 @@
   background-position: 0% 100%;
   background-size: 100% 2px;
   background-repeat: no-repeat;
-  width: fit-content;
+  margin-right: 10px; /* Add space between multiple anchors if necessary */
 }
 
 .cards-card-body .cta::after {

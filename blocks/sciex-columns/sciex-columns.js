@@ -37,7 +37,6 @@ export default function decorate(blockElement) {
         if (anchor) {
           const anchorContainerDiv = document.createElement('div');
           anchorContainerDiv.className = 'anchor-container';
-
           const anchorText = anchor.textContent || 'Learn More';
           const anchorHref = anchor.href || '#';
 
