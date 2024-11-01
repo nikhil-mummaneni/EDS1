@@ -1,54 +1,32 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
 
-export default function decorate(blockElement) {
+export default function decorate(block) {
+  /* change to ul, li */
   const ul = document.createElement('ul');
-  ul.className = 'card-list';
-
-  [...blockElement.children].forEach((rowElement) => {
-
+  [...block.children].forEach((row) => {
     const li = document.createElement('li');
-    li.className = 'card';
-
-    moveInstrumentation(rowElement, li);
-    while (rowElement.firstElementChild) {
-      li.append(rowElement.firstElementChild);
-    }
-
+    while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) {
-        div.className = 'card-image';
-      } else {
-        div.className = 'card-body';
+      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image tw-mb-16 md:tw-mb-20';
+      else {
+        div.className = 'cards-card-body';
 
         const button = div.querySelector('button');
         if (button) {
           button.remove();
         }
-        const anchor = div.querySelector('a');
 
-        if (anchor) {
-          const anchorContainerDiv = document.createElement('div');
-          anchorContainerDiv.className = 'anchor-container'; // Assign a class to the new div
-
-          const anchorText = anchor.textContent || 'Learn More';
-          const anchorHref = anchor.href || '#';
-
-          anchor.classList.add('cta', 'arrow-link');
-          anchor.href = anchorHref;
-          anchor.textContent = anchorText;
-          anchorContainerDiv.append(anchor);
-          div.append(anchorContainerDiv);
-        }
+        const cta = document.createElement('a');
+        cta.className = 'cta';
+        cta.href = '#';
+        cta.textContent = 'Learn More';
+        div.append(cta);
       }
     });
     ul.append(li);
   });
-
-  // Replace images with optimized versions
-  ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
-    img.closest('picture').replaceWith(optimizedPic);
-  });
+  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  block.textContent = '';
+  block.append(ul);
+  block.classList.add("tw");
 }

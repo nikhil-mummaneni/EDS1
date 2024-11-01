@@ -1,151 +1,102 @@
-.title-description-container {
-    padding: 20px;
+.cards>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
 }
 
-.title-description-container h2 {
-    color: #0084a9;
-    font-size: 24px;
-    padding: 10px 0;
+.cards>ul>li {
+  border-top: 1px solid #dadada;
+  background-color: var(--background-color);
 }
 
-.title-description-container p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #585857;
-    padding: 10px 0;
+.cards .cards-card-body {
+  margin: 16px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
-.horizontal-vertical-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.cards-card-body p {
+  flex-grow: 1;
 }
 
-.horizontal-vertical {
-    background-color: #E3F1F4;
-    border-top: 2px solid #007DA4;
+.cards .cards-card-body .cta {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007bff;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  width: fit-content;
+  /* border-bottom: 2px solid #007bff; */
 }
 
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.cards .cards-card-body .cta::after {
+  content: '→';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
-.card {
-    display: flex;
-    flex: 0 1 calc(50% - 20px);
-    margin: 10px;
-    border: none;
-    background-color: rgb(255 255 255 / 0.5);
-    overflow: hidden;
-    transition: background-color 0.3s ease;
+.cards .cards-card-body .cta:hover {
+  color: #0056b3;
+  /* border-bottom: 2px solid #007bff; */
 }
 
-.card:hover {
-    background-color: #fff;
+.cards .cards-card-body .cta:hover::after {
+  transform: translateX(5px);
 }
 
-.card-image {
-    background-color: #027DA4;
-    flex: 0 0 200px;
-    max-width: 300px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cards .cards-card-body .cta {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007bff;
+  position: relative;
+  transition: 0.9s;
+  width: fit-content;
+  background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
+  background-position: 0% 100%;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
 }
 
-.card-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.cards .cards-card-body .cta::after {
+  content: '→';
+  margin-left: 8px;
+  transition: 0.9s ease;
+  position: relative;
+  display: inline-block;
 }
 
-.card-body {
-    padding: 20px;
-    flex: 1;
-    font-size: 0.9em;
-    line-height: 1.4;
-    transition: color 0.3s ease;
+.cards .cards-card-body .cta:hover {
+  color: #0056b3;
+  background-position: 100% 100%;
+  background-size: 0% 2px;
 }
 
-.card-body h4 {
-    overflow-wrap: anywhere;
-    color: #5F6062;
-    font-size: 18px;
-    font-family: Helvetica, Arial, sans-serif;
+.cards .cards-card-body .cta:hover::after {
+  transform: translateX(3px);
 }
 
-.card-body p {
-    padding: 10px 0 0;
+.cards .cards-card-body .cards .cards-card-image {
+  line-height: 0;
 }
 
-.card:hover .cta,
-.card:hover .arrow {
-    color: #d8862a;
+.cards-card-image img {
+  height: 40px;
+  max-width: 40px;
+  margin-top: 32px;
+  margin-left: 10px;
 }
 
-.card:hover .card-image {
-    background-color: #005f75;
-}
-
-.card:hover .card-body {
-    color: #333;
-}
-
-.card-body a {
-    color: #007DA4;
-    text-decoration: none;
-}
-
-.arrow {
-    margin-left: 220px;
-    color: #3B63FB;
-    transition: color 0.3s ease;
-}
-
-.arrow-link {
-    position: relative;
-    padding-right: 230px; /* Space before the arrow */
-}
-
-.arrow-link::after {
-    content: '>'; /* Add the ">" symbol */
-    color: #007DA4; /* Same color as your original arrow */
-    position: absolute;
-    right: 0;
-    transition: color 0.3s ease;
-}
-
-.card:hover .arrow-link::after {
-    color: #d8862a; /* Change color on hover */
-}
-
-main > .section > div {
-    padding: 30px 24px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .card {
-        flex: 0 1 100%;
-        margin: 10px 0;
-    }
-
-    .card-body {
-        padding: 15px;
-        font-size: 0.8em;
-    }
-
-    .arrow {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .arrow-link {
-        padding-right: 20px;
-    }
+.cards>ul>li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
