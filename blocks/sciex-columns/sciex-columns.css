@@ -71,11 +71,12 @@
   margin: 0;
 }
 
-/* Anchor container styling */
 .anchor-container {
-  display: flex; /* Use flex to ensure anchors align properly */
-  flex-wrap: wrap; /* Allow anchors to wrap if necessary */
+  display: flex;          /* Ensures children (anchors) are in a line */
+  gap: 10px;             /* Adjust the space between anchors if necessary */
+  margin-top: auto;      /* Pushes the anchor container to the bottom */
 }
+
 
 /* CTA link styling */
 .cards-card-body .cta {

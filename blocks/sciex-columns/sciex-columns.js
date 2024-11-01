@@ -26,30 +26,26 @@ export default function decorate(blockElement) {
       } else {
         // Body container
         div.className = 'cards-card-body';
+
+        // Prepare a single container for all anchors
+        const anchorContainerDiv = document.createElement('div');
+        anchorContainerDiv.className = 'anchor-container';
+        anchorContainerDiv.style.display = 'flex'; // Ensure anchors are in a line
+
+        // Move existing buttons and links to the anchor container
         const button = div.querySelector('button');
         if (button) {
           button.remove();
         }
 
-        const anchors = div.querySelectorAll('a'); // Find all anchor tags
-        if (anchors.length > 0) {
-          const anchorContainerDiv = document.createElement('div');
-          anchorContainerDiv.className = 'anchor-container';
+        const anchors = div.querySelectorAll('a');
+        anchors.forEach((anchor) => {
+          anchor.classList.add('cta');
+          anchorContainerDiv.append(anchor); // Append all anchors to the container
+        });
 
-          // Iterate over each anchor and append them to the container
-          anchors.forEach((anchor) => {
-            const anchorText = anchor.textContent || 'Learn More';
-            const anchorHref = anchor.href || '#';
-
-            anchor.classList.add('cta');
-            anchor.href = anchorHref;
-            anchor.textContent = anchorText;
-
-            anchorContainerDiv.append(anchor); // Append anchor to the container
-          });
-
-          div.append(anchorContainerDiv); // Append the container to the card body
-        }
+        // Append the anchor container to the body div
+        div.append(anchorContainerDiv);
       }
     });
 
