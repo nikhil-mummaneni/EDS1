@@ -1,26 +1,34 @@
-.cards>ul {
+.cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 24px;
 }
 
-.cards>ul>li {
-  border-top: 1px solid #dadada;
+.cards > ul > li {
+  border: 1px solid #dadada;
+  border-radius: 8px;
   background-color: var(--background-color);
+  overflow: hidden; /* Ensures rounded corners work */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.cards > ul > li:hover {
+  transform: translateY(-4px); /* Lift effect on hover */
 }
 
 .cards .cards-card-body {
   margin: 16px;
-  height: 80%;
   display: flex;
   flex-direction: column;
+  height: 100%; /* Ensure full height */
 }
 
 .cards-card-body p {
   flex-grow: 1;
+  color: #333; /* Improved text color */
 }
 
 .cards .cards-card-body .cta {
@@ -29,37 +37,9 @@
   text-decoration: none;
   color: #007bff;
   position: relative;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-  width: fit-content;
-  /* border-bottom: 2px solid #007bff; */
-}
-
-.cards .cards-card-body .cta::after {
-  content: '→';
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.cards .cards-card-body .cta:hover {
-  color: #0056b3;
-  /* border-bottom: 2px solid #007bff; */
-}
-
-.cards .cards-card-body .cta:hover::after {
-  transform: translateX(5px);
-}
-
-.cards .cards-card-body .cta {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #007bff;
-  position: relative;
-  transition: 0.9s;
-  width: fit-content;
+  transition: background-position 0.3s ease, color 0.3s ease;
+  padding: 8px 12px; /* Add padding for better click area */
+  border-radius: 4px; /* Rounded button */
   background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
   background-position: 0% 100%;
   background-size: 100% 2px;
@@ -69,9 +49,7 @@
 .cards .cards-card-body .cta::after {
   content: '→';
   margin-left: 8px;
-  transition: 0.9s ease;
-  position: relative;
-  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 .cards .cards-card-body .cta:hover {
@@ -84,19 +62,13 @@
   transform: translateX(3px);
 }
 
-.cards .cards-card-body .cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards-card-image img {
-  height: 40px;
-  max-width: 40px;
-  margin-top: 32px;
-  margin-left: 10px;
-}
-
-.cards>ul>li img {
+.cards .cards-card-image img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-bottom: 1px solid #dadada; /* Separate image from text */
+}
+
+.cards-card-image {
+  line-height: 0;
 }
