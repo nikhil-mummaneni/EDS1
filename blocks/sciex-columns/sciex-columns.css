@@ -88,7 +88,7 @@
   transition: color 0.3s ease, background-size 0.3s ease;
   background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
   background-position: 0% 100%;
-  background-size: 75% 1px;
+  background-size: 75% 1.5px;
   background-repeat: no-repeat;
   margin-right: 10px; /* Add space between multiple anchors if necessary */
 }
