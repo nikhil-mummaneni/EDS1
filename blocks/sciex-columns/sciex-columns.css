@@ -1,82 +1,61 @@
+/* General container and grid settings */
 .cards>ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
 }
 
+/* Card item styling */
 .cards>ul>li {
   border-top: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-  height: 80%;
+  background-color: var(--background-color, #ffffff); /* Fallback if --background-color is not set */
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
+/* Styling for card body content */
+.cards .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Make the text flexible for responsiveness */
 .cards-card-body p {
   flex-grow: 1;
+  margin: 0;
 }
 
+/* CTA link styling */
 .cards .cards-card-body .cta {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: #007bff;
   position: relative;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, background-size 0.3s ease;
+  background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
+  background-position: 0% 100%;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
   width: fit-content;
-  /* border-bottom: 2px solid #007bff; */
 }
 
 .cards .cards-card-body .cta::after {
   content: '→';
   margin-left: 8px;
   transition: transform 0.3s ease;
-  position: relative;
   display: inline-block;
 }
 
 .cards .cards-card-body .cta:hover {
   color: #0056b3;
-  /* border-bottom: 2px solid #007bff; */
-}
-
-.cards .cards-card-body .cta:hover::after {
-  transform: translateX(5px);
-}
-
-.cards .cards-card-body .cta {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #007bff;
-  position: relative;
-  transition: 0.9s;
-  width: fit-content;
-  background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
-  background-position: 0% 100%;
-  background-size: 100% 2px;
-  background-repeat: no-repeat;
-}
-
-.cards .cards-card-body .cta::after {
-  content: '→';
-  margin-left: 8px;
-  transition: 0.9s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.cards .cards-card-body .cta:hover {
-  color: #0056b3;
-  background-position: 100% 100%;
   background-size: 0% 2px;
 }
 
@@ -84,7 +63,12 @@
   transform: translateX(3px);
 }
 
-.cards .cards-card-body .cards .cards-card-image {
+/* Image settings */
+.cards .cards-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
   line-height: 0;
 }
 
@@ -95,6 +79,7 @@
   margin-left: 10px;
 }
 
+/* Responsive image sizing */
 .cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
