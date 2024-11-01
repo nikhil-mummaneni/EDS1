@@ -8,7 +8,7 @@
   gap: 24px;
 }
 
-/* Make it responsive: 2 columns on small screens, 3 on medium, 4 on large */
+/* Responsive styling */
 @media (max-width: 1024px) {
   .cards-list {
     grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
@@ -58,12 +58,14 @@
   gap: 16px;
 }
 
+/* Heading styling */
 .cards-card-body h3 {
   font-size: 1.25rem;
   margin: 0;
   padding: 15px 0px;
 }
 
+/* Paragraph styling */
 .cards-card-body p {
   flex-grow: 1;
   margin: 0;
@@ -71,9 +73,8 @@
 
 /* Anchor container styling */
 .anchor-container {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Vertically center the anchors */
-  margin-top: 16px; /* Space between the body content and anchor container */
+  display: flex; /* Use flex to ensure anchors align properly */
+  flex-wrap: wrap; /* Allow anchors to wrap if necessary */
 }
 
 /* CTA link styling */

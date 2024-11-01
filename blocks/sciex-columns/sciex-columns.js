@@ -26,25 +26,29 @@ export default function decorate(blockElement) {
       } else {
         // Body container
         div.className = 'cards-card-body';
-
-        // Remove any existing button and add CTA link if present
         const button = div.querySelector('button');
         if (button) {
           button.remove();
         }
 
-        const anchor = div.querySelector('a');
-        if (anchor) {
+        const anchors = div.querySelectorAll('a'); // Find all anchor tags
+        if (anchors.length > 0) {
           const anchorContainerDiv = document.createElement('div');
           anchorContainerDiv.className = 'anchor-container';
-          const anchorText = anchor.textContent || 'Learn More';
-          const anchorHref = anchor.href || '#';
 
-          anchor.classList.add('cta');
-          anchor.href = anchorHref;
-          anchor.textContent = anchorText;
-          anchorContainerDiv.append(anchor);
-          div.append(anchorContainerDiv);
+          // Iterate over each anchor and append them to the container
+          anchors.forEach((anchor) => {
+            const anchorText = anchor.textContent || 'Learn More';
+            const anchorHref = anchor.href || '#';
+
+            anchor.classList.add('cta');
+            anchor.href = anchorHref;
+            anchor.textContent = anchorText;
+
+            anchorContainerDiv.append(anchor); // Append anchor to the container
+          });
+
+          div.append(anchorContainerDiv); // Append the container to the card body
         }
       }
     });
