@@ -1,5 +1,5 @@
-/* General container and grid settings */
-.cards>ul {
+/* Container styling */
+.cards-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -9,31 +9,48 @@
 }
 
 /* Card item styling */
-.cards>ul>li {
+.cards-item {
   border-top: 1px solid #dadada;
-  background-color: var(--background-color, #ffffff); /* Fallback if --background-color is not set */
+  background-color: var(--background-color, #ffffff);
   padding: 20px;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* Styling for card body content */
-.cards .cards-card-body {
+/* Image container styling */
+.cards-card-image {
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.cards-card-image img {
+  height: 40px;
+  max-width: 40px;
+  margin-top: 32px;
+  margin-left: 10px;
+}
+
+/* Card body/content styling */
+.cards-card-body {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 16px;
 }
 
-/* Make the text flexible for responsiveness */
+.cards-card-body h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
 .cards-card-body p {
   flex-grow: 1;
   margin: 0;
 }
 
 /* CTA link styling */
-.cards .cards-card-body .cta {
+.cards-card-body .cta {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -47,41 +64,18 @@
   width: fit-content;
 }
 
-.cards .cards-card-body .cta::after {
+.cards-card-body .cta::after {
   content: '→';
   margin-left: 8px;
   transition: transform 0.3s ease;
   display: inline-block;
 }
 
-.cards .cards-card-body .cta:hover {
+.cards-card-body .cta:hover {
   color: #0056b3;
   background-size: 0% 2px;
 }
 
-.cards .cards-card-body .cta:hover::after {
+.cards-card-body .cta:hover::after {
   transform: translateX(3px);
-}
-
-/* Image settings */
-.cards .cards-card-image {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 16px;
-  line-height: 0;
-}
-
-.cards-card-image img {
-  height: 40px;
-  max-width: 40px;
-  margin-top: 32px;
-  margin-left: 10px;
-}
-
-/* Responsive image sizing */
-.cards>ul>li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
 }
