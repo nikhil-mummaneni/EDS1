@@ -14,7 +14,7 @@
       "title",
       "hero",
       "cards",
-      "columns",
+      "columns" /*,
       "menu",
       "split-image-text",
       "header-bar",
@@ -22,7 +22,7 @@
       "horizontal-vertical",
       "page-title",
       "tabs",
-      "breadcrumb"
+      "breadcrumb"*/
     ]
   },
   {
