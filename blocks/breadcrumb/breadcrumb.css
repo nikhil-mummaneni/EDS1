@@ -1,5 +1,4 @@
 main > .breadcrumb-container {
-  padding: 10px;
   grid-row: 1;
   grid-column: 1;
 }
@@ -7,10 +6,6 @@ main > .breadcrumb-container {
 main > .section > div {
     padding: 15px 32px;
     }
-
-.blog main div.breadcrumb-container {
-  padding: 10px;
-}
 
 @media (min-width: 900px) {
   main .breadcrumb-container {
