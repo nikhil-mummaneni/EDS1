@@ -1,11 +1,10 @@
 .title-description-container {
-    padding: 20px;
+    padding: 9px;
 }
 
 .title-description-container h2 {
     color: #0084a9;
     font-size: 24px;
-    padding: 10px 0;
 }
 
 .title-description-container p {
