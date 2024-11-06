@@ -427,5 +427,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "heading",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
