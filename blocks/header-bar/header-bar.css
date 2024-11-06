@@ -1,7 +1,18 @@
-.header-bar {
-    max-width: 100%;
+.header-bar{
+    display: flex;
+    gap: 30px;
     background-color: rgb(20 20 20);
+    justify-content: space-between;
+    align-items: center;
+    font-family: Geogrotesque, sans-serif;
+    color: grey;
+    box-sizing: border-box;
     padding: 0 0 0 119px;
+    width: 100%;
+}
+.block .header-bar{
+    max-width: 100%;
+    padding: 0 !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,10 +24,6 @@
     height: 32px;
     width: auto;
     margin-left: 20px;
-}
-.header-bar div {
-    display: flex;
-    gap: 30px;
 }
 div a {
     display: flex;
@@ -45,7 +52,6 @@ div a:hover {
     display: flex;
     gap: 30px;
     margin-left: auto;
-    padding: 0 0 0 482px;
 }
 .navLinks-bar img {
     margin-right: 5px;
