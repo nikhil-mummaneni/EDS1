@@ -10,21 +10,39 @@ export default function decorate(block) {
   const childDiv = div({ class: 'global-flex global-flex-col md:global-flex-row md:global-flex-wrap' });
   parentDiv.appendChild(childDiv);
 
-  const imageDiv = div({ class: 'global-w-full md:global-w-1/2 global-flex global-flex-col media-grid-item  md:global-pt-0 false' });
-  parentDiv.appendChild(imageDiv);
-  const anchorTag = document.createElement('a');
-  const imageDiv1 = div({ class: 'global-w-full global-relative global-overflow-hidden global-aspect-[8/5]' });
-  imageDiv.appendChild(anchorTag);
-  anchorTag.appendChild(imageDiv1);
+  const childrenDivs = block.children;
+  Array.from(childrenDivs).forEach((childDiv, index) => {
+    const imageDiv = div({ class: 'global-w-full md:global-w-1/2 global-flex global-flex-col media-grid-item  md:global-pt-0 false' });
+    childDiv.appendChild(imageDiv);
+    const anchorTag = document.createElement('a');
+    const imageDiv1 = div({ class: 'global-w-full global-relative global-overflow-hidden global-aspect-[8/5]' });
+    imageDiv.appendChild(anchorTag);
+    anchorTag.appendChild(imageDiv1);
 
-  const container = block.querySelector('div');
-  const contentContainer = container.querySelector('div');
-  const image = contentContainer.querySelector('picture > img');
-  const imageTag = document.createElement('img');
-  imageTag.className = 'global-transition-all global-duration-500 global-inset-0 global-top-0 global-left-0 global-w-full global-h-full global-object-cover hover:global-scale-[1.05] motion-reduce:hover:global-transform-none';
-  imageTag.src = image.src;
-  imageDiv1.appendChild(imageTag);
+    if (!childDiv) return; // Check if childDiv exists
+    const container = childDiv.querySelector('div');
+    const contentContainer = container.querySelector('div');
+    const image = contentContainer.querySelector('picture > img');
+    const imageTag = document.createElement('img');
+    imageTag.className = 'global-transition-all global-duration-500 global-inset-0 global-top-0 global-left-0 global-w-full global-h-full global-object-cover hover:global-scale-[1.05] motion-reduce:hover:global-transform-none';
+    imageTag.src = image.src;
+    imageDiv1.appendChild(imageTag);
+    if(container.getElementsByTagName('div').length > 1) {
+      const link = container.getElementsByTagName('div')[1].querySelector('p > a');
+      anchorTag.href = link.href;
+      anchorTag.target = '_blank';
+      }
+    }
+  }
 
+  // Styling adjustments for parent element
+  block.parentElement.style.maxWidth = '100%';
+  block.parentElement.style.padding = '0';
+
+  // Clear only specific children or hide content during rendering
+  Array.from(block.children).forEach((child) => {
+    child.style.display = 'none'; // Hide each child element for rendering
+  });
   //block.textContent = '';
   block.append(sectionDiv);
 }
