@@ -8,7 +8,7 @@
   {
     "id": "section",
     "components": [
-     "text",
+      "text",
       "image",
       "button",
       "title",
@@ -16,13 +16,7 @@
       "cards",
       "columns",
       "menu",
-      "split-image-text",
-      "header-bar",
-      "hero-banner",
-      "horizontal-vertical",
-      "page-title",
-      "tabs",
-      "breadcrumb"
+      "fragment"
     ]
   },
   {
@@ -69,6 +63,12 @@
     "id": "menuItem",
     "components": [
       "subItem"
+    ]
+  },
+  {
+    "id": "sciex-columns",
+    "components": [
+      "sciex-card"
     ]
   },
   {
