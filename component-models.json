@@ -440,6 +440,13 @@
       },
       {
         "component": "text",
+        "name": "linkUrl",
+        "value": "",
+        "label": "Link Url",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alt text",
