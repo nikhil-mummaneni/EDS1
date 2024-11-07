@@ -32,7 +32,7 @@ export default function decorate(block) {
       anchorTag.href = link.href;
       anchorTag.target = '_blank';
       }
-    }
+    });
   }
 
   // Styling adjustments for parent element
