@@ -25,6 +25,6 @@ export default function decorate(block) {
   imageTag.src = image.src;
   imageDiv1.appendChild(imageTag);
 
-  block.textContent = '';
+  //block.textContent = '';
   block.append(sectionDiv);
 }
