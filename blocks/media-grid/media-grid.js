@@ -21,8 +21,7 @@ export default function decorate(block) {
 
     if (!childDiv) return; // Check if childDiv exists
     const container = childDiv.querySelector('div');
-    const contentContainer = container.querySelector('div');
-    const image = contentContainer.querySelector('picture > img');
+    const image = container.querySelector('picture > img');
     const imageTag = document.createElement('img');
     imageTag.className = 'global-transition-all global-duration-500 global-inset-0 global-top-0 global-left-0 global-w-full global-h-full global-object-cover hover:global-scale-[1.05] motion-reduce:hover:global-transform-none';
     imageTag.src = image.src;
