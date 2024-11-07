@@ -1,5 +1,5 @@
 import {
-  div
+  div,
 } from '../../scripts/dom-builder.js';
 
 export default function decorate(block) {
