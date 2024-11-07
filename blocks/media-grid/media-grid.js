@@ -33,9 +33,8 @@ export default function decorate(block) {
       anchorTag.target = '_blank';
       }
     });
-  }
 
-  // Styling adjustments for parent element
+    // Styling adjustments for parent element
   block.parentElement.style.maxWidth = '100%';
   block.parentElement.style.padding = '0';
 
@@ -45,4 +44,4 @@ export default function decorate(block) {
   });
   //block.textContent = '';
   block.append(sectionDiv);
-}
+  }
