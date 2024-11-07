@@ -77,5 +77,11 @@
     "components": [
       "tabItem"
     ]
+  },
+  {
+    "id": "media-grid",
+    "components": [
+      "media-grid-item"
+    ]
   }
 ]
