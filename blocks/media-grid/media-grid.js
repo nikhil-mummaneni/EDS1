@@ -11,7 +11,7 @@ export default function decorate(block) {
   parentDiv.appendChild(childDiv);
 
   const childrenDivs = block.children;
-  Array.from(childrenDivs).forEach((child, index) => {
+  Array.from(childrenDivs).forEach((child) => {
     const imageDiv = div({ class: 'global-w-full md:global-w-1/2 global-flex global-flex-col media-grid-item  md:global-pt-0 false' });
     const anchorTag = document.createElement('a');
     const imageDiv1 = div({ class: 'global-w-full global-relative global-overflow-hidden global-aspect-[8/5]' });
@@ -23,9 +23,9 @@ export default function decorate(block) {
     imageTag.className = 'global-transition-all global-duration-500 global-inset-0 global-top-0 global-left-0 global-w-full global-h-full global-object-cover hover:global-scale-[1.05] motion-reduce:hover:global-transform-none';
     imageTag.src = image.src;
     imageDiv1.appendChild(imageTag);
-    if(child.getElementsByTagName('div').length > 1) {
+    if (child.getElementsByTagName('div').length > 1) {
       const link = child.getElementsByTagName('div')[1].querySelector('p > a');
-      if(null != link) {
+      if (link != null) {
         anchorTag.href = link.href;
         anchorTag.target = '_blank';
       }
