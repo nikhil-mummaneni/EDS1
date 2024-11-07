@@ -25,9 +25,11 @@ export default function decorate(block) {
     imageDiv1.appendChild(imageTag);
     if(child.getElementsByTagName('div').length > 1) {
       const link = child.getElementsByTagName('div')[1].querySelector('p > a');
-      anchorTag.href = link.href;
-      anchorTag.target = '_blank';
+      if(null != link) {
+        anchorTag.href = link.href;
+        anchorTag.target = '_blank';
       }
+    }
     anchorTag.appendChild(imageDiv1);
     imageDiv.appendChild(anchorTag);
     childDiv.appendChild(imageDiv);
@@ -41,6 +43,5 @@ export default function decorate(block) {
   Array.from(block.children).forEach((child) => {
     child.style.display = 'none'; // Hide each child element for rendering
   });
-  //block.textContent = '';
   block.append(sectionDiv);
 }
