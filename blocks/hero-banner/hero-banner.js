@@ -105,10 +105,6 @@ export default function decorate(block) {
   svgIcon.appendChild(linePath);
   svgIcon.appendChild(arrowPath);
   ctaLinkInnerContainer.appendChild(svgIcon);
-
-  // Apply styling to block and wrapper
-  block.parentElement.style.maxWidth = '100%';
-  block.parentElement.style.padding = '0';
   block.textContent = '';
   block.classList.add('global');
   block.append(wrapper);
