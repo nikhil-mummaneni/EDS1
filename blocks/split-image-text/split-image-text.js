@@ -29,19 +29,19 @@ export default function decorate(block) {
 
   const contentDiv = div({ class: 'split-component-content global-w-full md:global-w-6/12 global-pt-24 md:global-pt-0 md:global-pl-[4.1666666666667%] lg:global-px-[4.1666666666667%] global-flex global-flex-col global-justify-center' });
   parentDiv.appendChild(contentDiv);
-  const contnetDiv1 = div({ class: 'atomic-child' });
-  contentDiv.appendChild(contnetDiv1);
+  const contentDiv1 = div({ class: 'atomic-child' });
+  contentDiv.appendChild(contentDiv1);
   const headingdiv = div({ class: 'atomic-heading-minimal global-pb-16 md:global-pb-20' });
-  contnetDiv1.appendChild(headingdiv);
+  contentDiv1.appendChild(headingdiv);
   const h3tag = document.createElement('h3');
   h3tag.className = 'text-delta global-text-grey-900 global-break-words';
   h3tag.textContent = heading.textContent;
   headingdiv.appendChild(h3tag);
 
-  const contnetDiv2 = div({ class: 'atomic-child' });
-  contentDiv.appendChild(contnetDiv2);
+  const contentDiv2 = div({ class: 'atomic-child' });
+  contentDiv.appendChild(contentDiv2);
   const buttonDiv1 = div({ class: 'atomic-buttons | global-inline-flex global-w-full md:global-w-auto md:global-flex global-items-center global-flex-wrap global-gap-x-16 global-gap-y-16 global-pb-16 md:global-pb-20' });
-  contnetDiv2.appendChild(buttonDiv1);
+  contentDiv2.appendChild(buttonDiv1);
   const buttonDiv2 = div({ class: 'global-w-full md:global-w-auto' });
   buttonDiv1.appendChild(buttonDiv2);
   const anchorTag = document.createElement('a');
@@ -72,7 +72,9 @@ export default function decorate(block) {
   svg.appendChild(path2);
   anchorDiv.appendChild(svg);
 
+  // Styling adjustments for parent element
+  block.parentElement.style.maxWidth = '100%';
+  block.parentElement.style.padding = '0';
   block.textContent = '';
-  block.classList.add('tw');
   block.append(sectionDiv);
 }
