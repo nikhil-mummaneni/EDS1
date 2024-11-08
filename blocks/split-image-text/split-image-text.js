@@ -6,7 +6,7 @@ import {
 export default function decorate(block) {
   const sectionDiv = document.createElement('section');
   sectionDiv.className = 'split-component-right global-pt-32 md:global-pt-48 global-pb-32 md:global-pb-48';
-  const parentDiv = div({ class: 'global-container global-flex global-flex-col md:global-flex-row md:global-justify-between' });
+  const parentDiv = div({ class: 'global-flex global-flex-col md:global-flex-row md:global-justify-between' });
   sectionDiv.appendChild(parentDiv);
   const imageDiv = div({ class: 'split-component-image global-w-full md:global-w-6/12 global-flex global-flex-col global-justify-center' });
   parentDiv.appendChild(imageDiv);
