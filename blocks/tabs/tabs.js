@@ -196,8 +196,6 @@ export default function decorate(block) {
         textContainer, // <-- Trailing comma added here
       );
     });
-
-    
   });
   // Append tabsdiv
   tabsContainer.insertBefore(tabsDiv, tabsContainer.firstChild);
