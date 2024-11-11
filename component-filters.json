@@ -8,7 +8,7 @@
   {
     "id": "section",
     "components": [
-      "text",
+     "text",
       "image",
       "button",
       "title",
@@ -16,7 +16,14 @@
       "cards",
       "columns",
       "menu",
-      "fragment",
+      "split-image-text",
+      "header-bar",
+      "hero-banner",
+      "horizontal-vertical",
+      "page-title",
+      "tabs",
+      "breadcrumb",
+      "media-grid",
       "sciex-columns"
     ]
   },
@@ -76,6 +83,12 @@
     "id": "tabs",
     "components": [
       "tabItem"
+    ]
+  },
+  {
+    "id": "media-grid",
+    "components": [
+      "media-grid-item"
     ]
   }
 ]
