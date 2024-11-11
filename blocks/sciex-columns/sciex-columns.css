@@ -1,0 +1,111 @@
+/* Container styling */
+.cards-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 24px;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .cards-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-list {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+  }
+}
+
+/* Card item styling */
+.cards-item {
+  border-top: 1px solid #dadada;
+  background-color: var(--background-color, #ffffff);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Image container styling */
+.cards-card-image {
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.cards-card-image img {
+  height: 40px;
+  max-width: 40px;
+  margin-top: 32px;
+  margin-left: 10px;
+}
+
+/* Card body/content styling */
+.cards-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Heading styling */
+.cards-card-body h3 {
+  font-size: 1.25rem;
+  padding: 15px 0px;
+  color: #707070;
+}
+
+/* Paragraph styling */
+.cards-card-body p {
+  flex-grow: 1;
+  margin: 0;
+  color: #707070;
+}
+
+.anchor-container {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+
+/* CTA link styling */
+.cards-card-body .cta {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007bff;
+  position: relative;
+  transition: color 0.3s ease, background-size 0.3s ease;
+  background-image: linear-gradient(to right, #007bff 100%, transparent 0%);
+  background-position: 0% 100%;
+  background-size: 75% 1.5px;
+  background-repeat: no-repeat;
+  margin-right: 10px; /* Add space between multiple anchors if necessary */
+}
+
+.cards-card-body .cta::after {
+  content: '→';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.cards-card-body .cta:hover {
+  color: #0056b3;
+  background-size: 0% 2px;
+}
+
+.cards-card-body .cta:hover::after {
+  transform: translateX(3px);
+}

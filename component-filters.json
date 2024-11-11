@@ -23,7 +23,9 @@
       "page-title",
       "tabs",
       "breadcrumb",
-      "media-grid"
+      "sciexColumns",
+      "media-grid",
+      "sciex-columns"
     ]
   },
   {
@@ -70,6 +72,12 @@
     "id": "menuItem",
     "components": [
       "subItem"
+    ]
+  },
+  {
+    "id": "sciex-columns",
+    "components": [
+      "sciex-card"
     ]
   },
   {
