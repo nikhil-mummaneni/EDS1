@@ -6,7 +6,6 @@ export default function decorate(blockElement) {
     [...blockElement.children].forEach((rowElement) => {
  
         [...row.children].forEach((col, index) => {
-        }
-    }
-         
+        });
+    });
 }
