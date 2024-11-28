@@ -25,7 +25,8 @@
       "breadcrumb",
       "sciexColumns",
       "media-grid",
-      "sciex-columns"
+      "sciex-columns",
+      "page-subnav"
     ]
   },
   {
@@ -90,6 +91,13 @@
     "id": "media-grid",
     "components": [
       "media-grid-item"
+    ]
+  },
+  {
+    "id": "page-subnav",
+    "components": [
+      "page-subnav-item",
+      "title-description"
     ]
   }
 ]
