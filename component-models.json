@@ -486,7 +486,7 @@
     ]
   },
   {
-    "id": "page-subnav",
+    "id": "page-subnav-item",
     "fields": [
       {
         "component": "richtext",
@@ -510,7 +510,7 @@
     ]
   },
   {
-    "id": "page-subnav",
+    "id": "page-subnav-item",
     "fields": [
       {
         "component": "reference",
