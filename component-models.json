@@ -485,47 +485,39 @@
       }
     ]
   },
+  
   {
     "id": "page-subnav-item",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "title-description",
-    "fields": [
+        "component": "text",
+        "valueType": "string",
+        "name": "Nav-Item",
+        "label": "nav-item",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Title",
+        "label": "title",
+        "value": ""
+      },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "description",
         "value": "",
-        "label": "Text",
+        "label": "Description",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "page-subnav-item",
-    "fields": [
+      },
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
+      
     ]
   }
 ]
