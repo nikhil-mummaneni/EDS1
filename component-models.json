@@ -485,7 +485,6 @@
       }
     ]
   },
-  
   {
     "id": "page-subnav-item",
     "fields": [
@@ -517,7 +516,6 @@
         "label": "Image",
         "multi": false
       }
-      
     ]
   }
 ]
