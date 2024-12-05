@@ -1,30 +1,18 @@
+import {} from '../../scripts/aem.js';
+import {} from '../../scripts/scripts.js';
 
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
-
-//export the default function
+// export the default function
 export default function decorate(block) {
+  // adding classes to subnav div
+  const subnavList = block.querySelector('ul');
+  if (subnavList) {
+    subnavList.classList.add('subnav-list');
 
-    if (!block || typeof block.querySelector !== 'function') {
-        console.error('invalid block recieved:',block);
-        return;
-    }
-    //adding classes to subnav div
-    const subnavList = block.querySelector('ul');
-    if(subnavList) {
+    subnavList.list.querySelectorAll('li').forEach((item) => {
+      item.classList.add('subnav-item');
+    });
+  }
 
-        subnavList.classList.add('subnav-list');
-
-        subnavList.list.querySelectorAll('li').forEach((item) => {
-            item.classList.add('subnav-item');
-
-        });
-
-    }
-    
-    //adding additional classes as needed
-    block.classList.add('page-subnav-container');
-    
+  // adding additional classes as needed
+  block.classList.add('page-subnav-container');
 }
-
