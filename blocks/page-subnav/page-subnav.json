@@ -45,7 +45,7 @@
           {
             "component": "text",
             "valueType": "string",
-            "name": "Title",
+            "name": "title",
             "label": "title",
             "value": ""
           },
