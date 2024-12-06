@@ -96,8 +96,7 @@
   {
     "id": "page-subnav",
     "components": [
-      "page-subnav-item",
-      "title-description"
+      "page-subnav-item"
     ]
   }
 ]
