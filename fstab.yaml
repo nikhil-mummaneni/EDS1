@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p24152-e1275188.adobeaemcloud.com/bin/franklin.delivery/gspann-content/eds-universal-editor/main"
+    url: "https://author-p24152-e1275188.adobeaemcloud.com/bin/franklin.delivery/gspann-content/eds-universal-editor/featureOneTest"
     type: "markup"
     suffix: ".html"
