@@ -38,7 +38,14 @@
             "component": "richtext",
             "name": "text",
             "value": "",
-            "label": "Text test",
+            "label": "Text",
+            "valueType": "string"
+          }
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Description",
             "valueType": "string"
           }
         ]
