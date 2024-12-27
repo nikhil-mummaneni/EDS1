@@ -206,7 +206,7 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Text test 111",
         "valueType": "string"
       }
     ]
