@@ -44,7 +44,8 @@ export default function decorate(block) {
   });
   contentWrapper.appendChild(flexContainer);
 
-  
+  const textContainer = div({ class: 'global-w-full' });
+  flexContainer.appendChild(textContainer);
 
   // Add heading and paragraph
   const heading = block.querySelector('h1');
