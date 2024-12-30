@@ -214,9 +214,7 @@
 
   {
     "id": "contact-support",
-    "fields": [
-     
-
+    "fields": [    
       {
         "component": "richtext",
         "name": "text",
@@ -227,7 +225,7 @@
 
       {
         "component": "richtext",
-        "name": "text",
+        "name": "desc",
         "value": "",
         "label": "Contact Support Description",
         "valueType": "string"
