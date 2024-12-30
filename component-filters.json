@@ -17,7 +17,8 @@
       "columns",
       "menu",
       "fragment",
-      "image-text"
+      "image-text",
+      "split-image-text"
     ]
   },
   {
