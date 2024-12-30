@@ -30,7 +30,7 @@
 
           {
             "component": "richtext",
-            "name": "text",
+            "name": "desc",
             "value": "",
             "label": "Contact Support Description",
             "valueType": "string"
