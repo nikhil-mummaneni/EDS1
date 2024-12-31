@@ -9,5 +9,18 @@
 
 
 .contact-support-wrapper {
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(44, 44, 44);    
 }
+
+.page-title-container-santosh h1 {
+    font-family: Geogrotesque, Helvetica, Arial;
+    font-size: 24px;
+    color: white;
+}
+
+.page-title-container-santosh h5 {
+    font-family: geogrotesque, Helvetica, Arial;;
+    font-size: 24px;
+    color: white;
+}
+
