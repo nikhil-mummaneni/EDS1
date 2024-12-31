@@ -30,9 +30,18 @@
 
 .page-title-container-santosh {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers items vertically */   
-    height: 100%;           /* Make sure the container has a defined height */   
+    justify-content: space-between; /* Space between text and button */
+    align-items: center;           /* Vertically center all content */
+    height: 100%;                  /* Ensure the container has a defined height */
+    padding: 0 15px;               /* Add some horizontal padding */
+    background-color: #000;        /* Example background color */
+}
+
+.page-title-container-santosh .text-container {
+    display: flex;
+    flex-direction: column; /* Stack <h1> and <h5> vertically */
+    justify-content: center;
+    padding-left: 35px;     /* Add padding to the left */
 }
 
 .page-title-container-santosh h1 {
@@ -40,13 +49,36 @@
     font-size: 24px;
     color: white;
     line-height: 24px;
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 .page-title-container-santosh h5 {
     font-family: Geogrotesque, Helvetica, Arial;
     font-size: 24px;
     color: rgb(161, 161, 161);
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
+
+.page-title-container-santosh .button-container {
+    display: flex;
+    align-items: center; /* Vertically center the button */
+}
+
+.page-title-container-santosh .button-container button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Example blue background */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 15px; /* Add space from the right edge */
+}
+
+.page-title-container-santosh .button-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 
