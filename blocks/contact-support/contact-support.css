@@ -31,11 +31,8 @@
 .page-title-container-santosh {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers items vertically */
-    align-items: center;    /* Centers items horizontally */
-    height: 100%;           /* Make sure the container has a defined height */
-    text-align: center;     /* Optional: Align text to center */
-    background-color: #000; /* Example background color for contrast */
+    justify-content: center; /* Centers items vertically */   
+    height: 100%;           /* Make sure the container has a defined height */   
 }
 
 .page-title-container-santosh h1 {
