@@ -34,7 +34,7 @@
     align-items: center;           /* Vertically center all content */
     height: 100%;                  /* Ensure the container has a defined height */
     padding: 0 15px;               /* Add some horizontal padding */
-    background-color: #000;        /* Example background color */
+         /* Example background color */
 }
 
 .page-title-container-santosh .text-container {
@@ -62,6 +62,9 @@
 .page-title-container-santosh .button-container {
     display: flex;
     align-items: center; /* Vertically center the button */
+    margin-left: 700px;
+    margin-top: -60px;
+    
 }
 
 .page-title-container-santosh .button-container button {
