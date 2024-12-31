@@ -60,10 +60,13 @@
 }
 
 .page-title-container-santosh .button-container {
+  
     display: flex;
-    align-items: center; /* Vertically center the button */
-    margin-left: 700px;
-    margin-top: -60px;
+    align-items: center;       /* Vertically center the button */
+    justify-content: flex-end; /* Align the button to the right */
+    width: 100%;               /* Ensure the container spans the full width */
+    padding-right: 15px;       /* Add some spacing from the right edge */
+    box-sizing: border-box;    /* Ensure padding doesn't overflow */
     
 }
 
