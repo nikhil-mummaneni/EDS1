@@ -5,7 +5,7 @@ import {
 
 export default function decorate(block) {
   // Main wrapper container
-  const wrapper = div({ class: 'global-pb-32 md:global-pb-48' });
+  const wrapper = div({ class: 'contact-support block' });
 
   // Background section container with styling for alignment
   const backgroundSection = document.createElement('section');
@@ -44,7 +44,7 @@ export default function decorate(block) {
   });
   contentWrapper.appendChild(flexContainer);
 
-  const textContainer = div({ class: 'global-w-full' });
+  const textContainer = div({ class: 'abc-santosh' });
   flexContainer.appendChild(textContainer);
 
   // Add heading and paragraph
