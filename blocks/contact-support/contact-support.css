@@ -10,17 +10,46 @@
 
 .contact-support-wrapper {
     background-color: rgb(44, 44, 44);    
+    height: 150px;
 }
-
+/*
 .page-title-container-santosh h1 {
     font-family: Geogrotesque, Helvetica, Arial;
     font-size: 24px;
     color: white;
+    line-height: 24px;
 }
 
 .page-title-container-santosh h5 {
     font-family: geogrotesque, Helvetica, Arial;;
     font-size: 24px;
     color: rgb(161, 161, 161);
+}
+*/
+
+
+.page-title-container-santosh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers items vertically */
+    align-items: center;    /* Centers items horizontally */
+    height: 100%;           /* Make sure the container has a defined height */
+    text-align: center;     /* Optional: Align text to center */
+    background-color: #000; /* Example background color for contrast */
+}
+
+.page-title-container-santosh h1 {
+    font-family: Geogrotesque, Helvetica, Arial;
+    font-size: 24px;
+    color: white;
+    line-height: 24px;
+    margin: 0; /* Remove default margins */
+}
+
+.page-title-container-santosh h5 {
+    font-family: Geogrotesque, Helvetica, Arial;
+    font-size: 24px;
+    color: rgb(161, 161, 161);
+    margin: 0; /* Remove default margins */
 }
 
