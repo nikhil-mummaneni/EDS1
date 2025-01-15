@@ -1,0 +1,57 @@
+{
+    "definitions": [
+      {
+        "title": "Coveo search",
+        "id": "coveo-search",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/block/v1/block",
+              "template": {
+                "name": "Coveo search",
+                "filter": "coveo-search"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "models": [
+      {
+        "id": "coveoSearch",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "icon",
+            "label": "Icon",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "iconAlt",
+            "label": "Alt Text",
+            "value": ""
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "id": "coveo-search",
+        "components": [
+          "coveoSearch"
+        ]
+      }
+    ]
+  }
+  
+  
