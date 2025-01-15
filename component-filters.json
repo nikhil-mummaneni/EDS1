@@ -41,12 +41,6 @@
     ]
   },
   {
-    "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
     "id": "header-bar",
     "components": [
       "headerbarItem"
