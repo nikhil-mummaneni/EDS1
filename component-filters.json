@@ -41,9 +41,9 @@
     ]
   },
   {
-    "id": "coveo-search",
+    "id": "cards",
     "components": [
-      "coveoSearch"
+      "card"
     ]
   },
   {
