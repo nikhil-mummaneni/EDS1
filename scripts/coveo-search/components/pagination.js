@@ -1,4 +1,4 @@
-import { paginationController } from "../controller/controllers";
+import { paginationController } from "../controller/controllers.js";
 
 export const renderPagination = () => {
     const paginationElement = document.getElementById('pagination');

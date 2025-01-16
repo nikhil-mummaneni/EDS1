@@ -1,4 +1,4 @@
-import { headlessResultsList } from '../controller/controllers';
+import { headlessResultsList } from '../controller/controllers.js';
 export const renderSearchResults = () => {
     const resultsElement = document.getElementById('coveo-results');
     

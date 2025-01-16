@@ -5,8 +5,8 @@ import {
     buildPager,
     buildQuerySummary,
     buildSort,
-  } from "@coveo/headless";
-  import { searchEngine } from "../engine";
+  } from "https://static.cloud.coveo.com/headless/v3/headless.esm.js";
+  import { searchEngine } from "../engine.js";
   
   export const searchBoxController = buildSearchBox(searchEngine, {
     options: {

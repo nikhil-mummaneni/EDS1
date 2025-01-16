@@ -1,4 +1,4 @@
-import { querySummary } from '../controller/controllers';
+import { querySummary } from '../controller/controllers.js';
 
 export const renderQuerySummary = () => {
     const querySummaryElement = document.getElementById('query-summary');

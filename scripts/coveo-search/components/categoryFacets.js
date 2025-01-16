@@ -2,7 +2,7 @@ import {
     sourceFacetController,
     filetypeFacetController,
     pagetypeFacetController
-  } from '../controller/controllers';
+  } from '../controller/controllers.js';
   
   export const renderSourceFacet = () => {
     const facetElement = document.getElementById('source-facet');

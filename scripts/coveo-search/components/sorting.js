@@ -1,4 +1,4 @@
-import { sortController } from "../controller/controllers";
+import { sortController } from "../controller/controllers.js";
 
 export const renderSorting = () => {
     const sortElement = document.getElementById('sort');

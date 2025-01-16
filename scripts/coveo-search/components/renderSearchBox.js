@@ -1,4 +1,4 @@
-import { searchBoxController, pagetypeFacetController } from '../controller/controllers';
+import { searchBoxController, pagetypeFacetController } from '../controller/controllers.js';
 
 export const renderSearchBox = () => {
   const searchComponentHTML = `

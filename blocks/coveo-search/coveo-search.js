@@ -1,20 +1,12 @@
 import {} from '../../scripts/aem.js';
-import { buildSearchEngine } from '@coveo/headless';
+import { searchEngine } from '../../scripts/coveo-search/engine.js';
 import { renderSearchBox } from '../../scripts/coveo-search/components/renderSearchBox.js';
-import { renderSearchResults } from '../../scripts/coveo-search/components/searchResult';
-import { renderSourceFacet, renderFiletypeFacet, renderPagetypeFacet} from '../../scripts/coveo-search/components/categoryFacets'
-import { renderPagination } from '../../scripts/coveo-search/components/pagination'
-import { renderQuerySummary } from '../../scripts/coveo-search/components/querySummary'
-import { renderSorting } from '../../scripts/coveo-search/components/sorting'
+import { renderSearchResults } from '../../scripts/coveo-search/components/searchResult.js';
+import { renderSourceFacet, renderFiletypeFacet, renderPagetypeFacet} from '../../scripts/coveo-search/components/categoryFacets.js'
+import { renderPagination } from '../../scripts/coveo-search/components/pagination.js'
+import { renderQuerySummary } from '../../scripts/coveo-search/components/querySummary.js'
+import { renderSorting } from '../../scripts/coveo-search/components/sorting.js'
 export default async function decorate(block) {
-  const searchEngine = buildSearchEngine({
-      configuration: {
-        organizationId: 'sciextestkympne75',
-        accessToken: 'xx3e8b448c-4265-4283-bd4f-9856cd68e916',
-        apiBaseUrl: 'https://sciextestkympne75.org.coveo.com/rest/search',
-      },
-  });
-
   block.textContent = '';
   // Create the main container div
   const coveoSearchDiv = document.createElement('div');
