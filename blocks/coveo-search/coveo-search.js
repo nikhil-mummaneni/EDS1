@@ -1,5 +1,5 @@
 import {} from '../../scripts/aem.js';
-import { searchEngine } from './engine';
+import { buildSearchEngine } from '@coveo/headless';
 import { renderSearchBox } from '../../scripts/coveo-search/components/renderSearchBox.js';
 import { renderSearchResults } from '../../scripts/coveo-search/components/searchResult';
 import { renderSourceFacet, renderFiletypeFacet, renderPagetypeFacet} from '../../scripts/coveo-search/components/categoryFacets'
@@ -7,6 +7,14 @@ import { renderPagination } from '../../scripts/coveo-search/components/paginati
 import { renderQuerySummary } from '../../scripts/coveo-search/components/querySummary'
 import { renderSorting } from '../../scripts/coveo-search/components/sorting'
 export default async function decorate(block) {
+  const searchEngine = buildSearchEngine({
+      configuration: {
+        organizationId: 'sciextestkympne75',
+        accessToken: 'xx3e8b448c-4265-4283-bd4f-9856cd68e916',
+        apiBaseUrl: 'https://sciextestkympne75.org.coveo.com/rest/search',
+      },
+  });
+
   block.textContent = '';
   // Create the main container div
   const coveoSearchDiv = document.createElement('div');
