@@ -570,15 +570,19 @@ function buildBlock(blockName, content) {
  * @param {Element} block The block element
  */
 async function loadBlock(block) {
+  console.log("Block search", block);
   const status = block.dataset.blockStatus;
   if (status !== 'loading' && status !== 'loaded') {
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
+    console.log("blockName", blockName);
     try {
       const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`);
+  
       const decorationComplete = new Promise((resolve) => {
         (async () => {
           try {
+            console.log("Path", `${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.js`);
             const mod = await import(
               `${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.js`
             );
