@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p24152-e1275188.adobeaemcloud.com/bin/franklin.delivery/gspann-content/eds-universal-editor/main"
+    url: "https://drive.google.com/drive/folders/1tOdv8XGpRID3kwiyFG9Ro7wLf6f_tHMH"
     type: "markup"
     suffix: ".html"
